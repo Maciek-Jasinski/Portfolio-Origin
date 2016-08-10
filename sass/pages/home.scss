@@ -1,0 +1,118 @@
+.home {
+	overflow: hidden;
+	height: 100vh;
+	width: 100vw;
+	background-color: $brand-dark-gray;
+	color: $brand-green;
+	text-align: center;
+	font-family: $base-font;
+	&::before {
+		animation: 1s slide-right 1s backwards;
+		content: "";
+		width: 25vw;
+		height: 2px;
+		position: absolute;
+		top: 50vh;
+		left: 0;
+		background-color: $brand-sand;
+	}
+	&::after {
+		animation: 1s slide-left 1s backwards;
+		content: "";
+		width: 25vw;
+		height: 2px;
+		position: absolute;
+		top: 50vh;
+		right: 0;
+		background-color: $brand-sand;
+	}
+	&__container {
+		display: none;
+		width: 330px;
+		height: 330px;
+		margin: auto;
+		margin-top: calc(50vh - 184px);
+		border: 20px solid $brand-green;
+		transform: rotate(45deg);
+		background-color: transparent;
+	}
+	&__content {
+		animation: 5s bg backwards;
+		position: absolute;
+		top: calc(50vh - 90px);
+		left: calc(50% - 110px);
+		&__name {
+			@include font-size($h2-font-sizes);
+			padding-top: 23px;
+			padding-bottom: 20px;
+			&>span {
+				font-size: 1.4em;
+			}
+		}
+		&__surname {
+			@include font-size($h1-font-sizes);
+			margin-top: -132px;
+			padding-right: 35px;
+			&__span {
+				font-size: 2.8em;
+				letter-spacing: -11px;
+			}
+		}
+	}
+	&__border-1 {
+		width: 350px;
+		position: absolute;
+		top: calc(50vh - 161px);
+		left: calc(50vw - 274px);
+		color: $brand-sand;
+		@include font-size($border-font-sizes);
+		font-family: $logo-font;
+		font-weight: 500;
+		letter-spacing: 30px;
+		text-align: left;
+		text-transform: uppercase;
+		transform: rotate(-45deg);
+	}
+	&__border-2 {
+		width: 350px;
+		position: absolute;
+		top: calc(50vh + 138px);
+		left: calc(50vw - 78px);
+		color: $brand-sand;
+		@include font-size($border-font-sizes);
+		font-family: $logo-font;
+		font-weight: 500;
+		letter-spacing: 30px;
+		text-transform: uppercase;
+		text-align: left;
+		transform: rotate(135deg);
+	}
+	&__border-3 {
+		width: 350px;
+		position: absolute;
+		top: calc(50vh - 111px);
+		left: calc(50vw - 25px);
+		color: $brand-sand;
+		@include font-size($border-font-sizes);
+		font-family: $logo-font;
+		font-weight: 500;
+		letter-spacing: 25px;
+		text-transform: uppercase;
+		text-align: left;
+		transform: rotate(45deg);
+	}
+	&__border-4 {
+		width: 350px;
+		position: absolute;
+		top: calc(50vh + 89px);
+		left: calc(50vw - 320px);
+		color: $brand-sand;
+		@include font-size($border-font-sizes);
+		font-family: $logo-font;
+		font-weight: 500;
+		letter-spacing: 25px;
+		text-transform: uppercase;
+		text-align: left;
+		transform: rotate(-135deg);
+	}
+}//5e001b

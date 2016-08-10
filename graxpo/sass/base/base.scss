@@ -1,0 +1,18 @@
+html {
+   font-size: 62.5%;
+}
+
+body {
+   font-size: 1.5em;
+   background-color: $brand-white;
+   font-family: $header-font;
+   position: relative;
+   min-width: 300px;
+   margin: 0;
+}
+
+.site-main,
+.site-footer{
+   overflow: hidden;
+   width: 100%;
+}

@@ -1,0 +1,33 @@
+%header {
+	@include font-size($h3-font-sizes);
+	color: $brand-light-black;
+	text-align: center;
+	font-weight: bold;
+	text-transform: uppercase;
+	letter-spacing: 2px;
+}
+%header::after {
+	content: "";
+	border-top: 4px solid $brand-after;
+	margin: 20px auto;
+	display: block;
+	transition: 0.5s;
+	width: 40px;
+}
+%header2 {
+	@include font-size($h4-font-sizes);
+	color: $brand-gray-description;
+	padding: 15px;
+	padding-top: 40px;
+	text-transform: uppercase;
+	&::after {
+		content: "";
+		display: block;
+		border-top: 2px solid $brand-gray-description;
+		position: absolute;
+		top: 145px;
+		left: calc(50% - 14px);
+		transition: 0.5s;
+		width: 30px;
+	}
+}

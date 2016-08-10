@@ -1,0 +1,365 @@
+@media (min-width: 550px) {
+	.clients{
+		&__list{
+			&__item{
+				width: calc(50% - 75px);
+				margin: 0 35px;
+				margin-bottom: 30px;
+				display: inline-block;
+				}
+		}
+	}
+	.features {
+		&__list__item {
+			width: calc(50% - 32.5px);
+			margin: 15px;
+			display: inline-block;
+		}
+	}
+	.design {
+		&__list__item,
+		&__list2__item{
+			width: calc(50% - 10px);
+			max-width: 600px;
+			display: inline-block;
+		}
+	}
+	.products {
+		&__list__item {
+			width: calc(50% - 32.5px);
+			margin: 15px;
+			display: inline-block;
+		}
+	}
+	.contact {
+		margin: 0;
+		position: absolute;
+		left: 51%;
+		top: 250px;
+		text-align: left;
+		&__logo {
+			margin: 0;
+		}
+		
+	}
+	.informations {
+		margin-top: 0;
+		&__list__item {
+			padding-left: 40px;
+			width: calc(50% - 30px);
+			display: inline-block;
+			float: left;
+			text-align: left;
+			&:nth-child(2),
+			&:nth-child(3) {
+				display: inline-block;
+				
+			}
+		}
+	}
+	}
+
+@media (min-width: 750px){
+	.home{
+		padding-right: calc(50% - 365px);
+		padding-left: calc(50% - 365px);
+		padding-top: 280px
+	}
+	.logo {
+		margin-left: calc(50% - 365px);
+	}
+	.nav-icon{
+		padding-right: calc(50% - 390px);
+	}
+	.features{
+		&__title,
+		&__description{
+			margin-left: calc(50% - 300px);
+			margin-right: calc(50% - 300px);
+		}
+	}
+	.design {
+		&__list,
+		&__list2 {
+			margin: 0 auto;
+		}
+	}
+	.testimonies{
+		&__users{
+			&__list__item{
+				&__pic{
+					margin-left: calc(50% - 370px);
+				}
+				&__desc,
+				&__sign{
+					padding-left: calc(50% - 200px);
+					padding-right: calc(50% - 370px);
+				}
+			}
+		}
+	}
+	.pricing {
+		&__list {
+			text-align: center;
+			&__item {
+				width: calc(50% - 55px);
+				max-width: 600px;
+				margin: 20px;
+				display: inline-block;
+			}
+		}
+	}
+	.faqs{
+		padding-left: calc(50% - 360px);
+		padding-right: calc(50% - 360px);
+	}
+}
+
+@media (min-width: 1000px){
+	.home{
+		padding-right: calc(50% - 480px);
+		padding-left: calc(50% - 480px);
+		height: 900px;
+		&__desc{
+			width: 50%;
+			margin-top: 150px;
+			float: left;
+		}
+		&__pic{
+			width: 50%;
+			margin-top: 60px;
+			display: inline-block;
+		}
+	}
+	.logo {
+		margin-left: calc(50% - 480px);
+	}
+	.nav-icon{
+		padding-right: calc(50% - 480px);
+		padding-left: calc(50% - 480px);
+	}
+	.clients{
+		&__list{
+			&__item{
+				width: calc(25% - 100px);
+			}
+		}
+	}
+	.features{
+		&__title,
+		&__description{
+			margin-left: calc(50% - 320px);
+		}
+		&__list{
+			text-align: center;
+			&__item{
+			width: calc(25% - 50px);
+			}
+		}
+	}
+	.design{
+		padding: 70px 0;
+		padding-bottom: 200px;
+		position: relative;
+		&__title,
+		&__description{
+			margin-left: calc(50% - 320px);
+			margin-right: calc(50% - 320px);
+		}
+		&__list{
+			width: 33vw;
+			box-sizing: border-box;
+			padding-top: 140px;
+			padding-right: 10px;
+			padding-left: 100px;
+			float: left;
+			&__item{
+				width: 100%;
+				display: block;
+			}
+		}
+		&__list2{
+			width: 33vw;
+			margin-left: 66vw;
+			box-sizing: border-box;
+			padding-top: 140px;
+			padding-right: 100px;
+			padding-left: 10px;
+			&__item{
+				width: 100%;
+				display: block;
+			}
+		}
+		&__items{
+			width: 350px;
+			padding: 0;
+			position: absolute;
+			top: 350px;
+			left: calc(50% - 175px);
+		}
+	}
+	.testimonies{
+		&__users__list__item{
+			&__pic{
+				width: 180px;
+				height: 180px;
+				margin-left: calc(50% - 490px);
+			}
+			&__desc{
+				padding-left: calc(50% - 270px);
+				padding-right: calc(50% - 490px);
+				font-size: 1.8em;
+			}
+			&__sign{
+				padding-left: calc(50% - 270px);
+			}
+		}
+		&__numbers{
+			&__list{
+				text-align: center;
+				&__item{
+				padding: 10px 70px;
+				display: inline-block;
+				}
+			}
+		}
+	}
+	.products{
+		padding-bottom: 120px;
+		&__title,
+		&__desc{
+			margin-left: calc(50% - 320px);
+			margin-right: calc(50% - 320px);
+		}
+		&__list{
+			padding-top: 50px;
+			text-align: center;
+			&__item{
+			width: calc(25% - 50px);
+			}
+		}
+		&__button{
+			margin-top: 90px
+		}
+	}
+	.benefits{
+		padding-bottom: 120px;
+		&__title,
+		&__description{
+			margin-left: calc(50% - 320px);
+			margin-right: calc(50% - 320px);
+		}
+		&__list{
+			padding-top: 50px;
+			text-align: center;
+			&__item{
+			width: calc(33% - 50px);
+			padding: 15px;
+			display: inline-block;
+			}
+		}
+	}
+	.app-spot{
+		&__title,
+		&__description{
+		margin-left: calc(50% - 320px);
+		margin-right: calc(50% - 320px);
+		}
+		&__button{
+			margin-top: 80px;
+		}
+	}
+	.pricing{
+		padding-bottom: 120px;
+		&__title,
+		&__description{
+			margin-left: calc(50% - 320px);
+			margin-right: calc(50% - 320px);
+		}
+	}
+	.faqs{
+		padding-left: calc(50% - 480px);
+		padding-right: calc(50% - 480px);
+		&__title,
+		&__description{
+			margin-left: calc(50% - 320px);
+			margin-right: calc(50% - 320px);
+		}
+	}
+	.sign-up{
+		padding-left: calc(50% - 480px);
+		&__field{
+			width: 18vw;
+			margin: 10px 10px;
+			float: left;
+		}
+		&__button{
+			margin: 10px 20px;
+		}
+	}
+	.contact{
+		left: 120px;
+		top: 150px;
+	}
+	.informations{
+		padding-top: 100px;
+		padding-left: 28vw;
+		&__list__item{
+			width: 20vw;	
+		}
+		
+	}
+
+}
+
+@media (min-width: 1200px){
+	.home{
+		padding-left: calc(50% - 600px);
+		padding-right: calc(50% - 600px);
+		padding-top: 200px;
+		&__desc{
+			padding-left: 40px;
+			box-sizing: border-box;
+		}
+		&__pic{
+			padding-right: 40px;
+			box-sizing: border-box;
+			
+		}
+	}
+
+	.logo{
+		margin-left: calc(50% - 560px);
+
+	}
+	.nav-icon{
+		padding-right: calc(50% - 580px);
+		padding-left: calc(50% - 580px);
+	}
+	.testimonies__users__list__item{
+		&__pic{
+			margin-left: calc(50% - 590px);
+		}
+	}
+	.pricing {
+		&__list{
+			text-align: center;
+			&__item{
+			width: calc(25% - 100px);
+			display: inline-block;
+			margin: 25px 25px;
+			}
+		}
+	}
+	.faqs{
+		padding-left: calc(50% - 580px);
+		padding-right: calc(50% - 580px);
+	}
+	.sign-up{
+		padding-left: calc(50% - 580px);
+		&__button{
+			margin: 10px 60px;
+			margin-bottom: 5px;
+		}
+	}
+}

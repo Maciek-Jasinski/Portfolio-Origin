@@ -1,0 +1,26 @@
+.sign-up{
+	padding: 70px 20px;
+	background-color: $brand-primary;
+	&__field{
+		animation: 1s slide-up backwards;
+		width: 95%;
+		height: 40px;
+		margin: 10px 0;
+		padding: 5px 10px;
+		border: 2px solid $brand-white;
+		border-radius: 5px;
+		background-color: transparent;
+		color: white;
+		@include font-size($description-item-font-sizes);
+		&::-webkit-input-placeholder{
+    		color: rgba(255,255,255,0.5);
+		}
+	}
+	&__button{
+		animation: 1s slide-up backwards;
+		width: 200px;
+		margin: 30px 20px;
+		@extend %button;
+		background-color: $brand-buttonh;
+	}
+}

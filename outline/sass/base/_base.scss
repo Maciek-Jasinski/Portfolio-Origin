@@ -1,0 +1,45 @@
+html{
+	font-size: 62.5%;
+
+}
+body{
+	background-color: #ffffff;
+	font-family: ('Montserrat', sans-serif);	
+	font-size: 1.5em;
+	min-width: 300px;
+	margin-bottom: 500px;
+	position: relative;
+}
+#site-main,
+#site-footer{
+		overflow: hidden;
+		width: 100%;
+		transition: 0.5s;
+}
+
+
+#site-main{
+	position: relative;
+	z-index: 999;
+}
+.site-header{
+	z-index: 1200;
+}
+.clients,
+.features,
+.design,
+.testimonies,
+.products,
+.benefits,
+.pricing,
+.faqs,{
+	margin: 0 auto;
+}
+
+.hide{
+	display: none;
+}
+
+.bg{
+	background-color: white;
+}

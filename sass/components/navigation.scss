@@ -1,0 +1,118 @@
+.navigation {
+	//display: none;
+	//overflow: hidden;
+	//width: 100vw;
+	//height: 100vh;
+	//position: fixed;
+	//top: 0;
+	//right: 0;
+	&__list {
+		width: 50vw;
+		height: 100vh;
+		margin-right: -50vw;
+		box-sizing: border-box;
+		padding: 10%;
+		padding-top: 7%;
+		position: absolute;
+		top: 0;
+		right: 0;
+		z-index: 50;
+		background-color: $brand-light-sand;
+		color: $brand-dark-gray;
+		@include font-size($menu-font-sizes);
+		font-weight: 400;
+		&__item {
+			margin-left: 10%;
+			padding: 30px 15px;
+			padding-left: 15%;
+			position: relative;
+			transition: 0.5s;
+			&__link {
+				&::before {
+					content: "";
+					width: 20px;
+					height: 20px;
+					position: absolute;
+					top: calc(50% - 10px);
+					left: 0;
+					//border-radius: 100%;
+					background-color: transparent;
+					transform: rotate(45deg);
+					transition: 0.6s;
+				}
+				&:hover {
+					cursor: pointer;
+					&::before {
+						background-color: $brand-green;
+						transition: 0.3s;
+					}					
+				}
+			}
+		}	
+	}
+	&__button {
+		padding: 40px;
+		position: fixed;
+		right: 0;
+		top: 0;
+		z-index: 120;
+		transition: 0.3s;
+		&__item {
+			width: 32px;
+			height: 3px;
+			margin-bottom: 5px;
+			z-index: 100;
+			background-color: $brand-green;
+			transition: 0.3s;
+		}
+		&:hover {
+			cursor: pointer;
+			margin-top: -2px;
+			.navigation__button__item {
+				margin-bottom: 7px;
+			}
+		}
+	}
+	&__shadow {
+		width: 50vw;
+		height: 100vw;
+		margin-left: -50vw;
+		float: left;
+		position: absolute;
+		top: 0;
+		left: 0;
+		z-index: 50;
+		background-color: rgba(0,0,0,0.9);
+	}
+}
+.active-nav {
+	margin-top: -2px;
+	.navigation__button__item:nth-child(1) {
+		margin-bottom: 7px;
+		transform: translateY(10px) rotate(-45deg);
+	}
+	.navigation__button__item:nth-child(2) {
+		margin-bottom: 7px;
+		background-color: transparent;
+	}
+	.navigation__button__item:nth-child(3) {
+		margin-bottom: 7px;
+		transform: translateY(-10px) rotate(45deg);
+	}
+}
+.active-nav-link .navigation__list__item__link{
+	 
+		color: $brand-red;
+		&::before {
+			content: "";
+			width: 20px;
+			height: 20px;
+			position: absolute;
+			top: calc(50% - 10px);
+			left: 0;
+			background-color: transparent;
+			transform: rotate(45deg);
+			transition: 0.6s;
+		}
+	
+}

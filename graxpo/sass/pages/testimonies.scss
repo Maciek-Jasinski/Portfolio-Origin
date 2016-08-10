@@ -1,0 +1,102 @@
+.testimonies {
+	text-align: center;
+	background: url(../images/bg1.jpg) center no-repeat;
+	background-attachment: fixed;
+	background-size: cover;
+	background-color: rgba(0, 0, 0, 0.7);
+	background-blend-mode: multiply;
+	color: $brand-white;
+	overflow: hidden;
+	position: relative;
+	&__title {
+		animation: 1s slide-down backwards paused;
+		padding-top: 70px;
+		@extend %header;
+		color: #dadada;
+		&::after {
+			animation: 1s slide-down backwards;
+			border-color: #dadada;
+		}
+	}
+	&__description {
+		animation: 1s slide-down 0.1s backwards paused;
+		@extend %description;
+		color: #dadada;
+		padding-top: 40px;
+		text-transform: uppercase;
+	}
+	&__slider {
+		animation: 2s bg 0.5s backwards paused;
+		width: 300%;
+		overflow: hidden;
+		padding-top: 20px 0;
+		position: relative;
+		&__item{
+			width: 33.33%;
+			float: left;
+			box-sizing: border-box;
+			padding: 0 20px;
+			&__photo {
+				width: 120px;
+				padding-top: 15px;
+			}
+			&__description {
+				@extend %description;
+				color: #dadada;
+				padding-top: 25px;
+			}
+			&__title {
+				@extend %header;
+				color: $brand-main;
+				padding-top: 10px;
+				&::after {
+					display: none;
+				}
+			}
+		}
+	}
+	&__switcher {
+		padding: 30px;
+		padding-top: 40px;
+		&__item{
+			width: 10px;
+			height: 10px;
+			border: 2px solid $brand-main;
+			border-radius: 50%;
+			display: inline-block;
+			margin: 0 5px;
+			transition:0.3s;
+			&:hover{
+				cursor: pointer;
+				background-color: $brand-main;
+				transition: 0.3s;
+			}
+		}
+	}
+}
+@media (min-width: 750px) {
+	.testimonies {
+		&__slider {
+			&__item {
+			 padding-left: 7%;
+			 padding-right: 7%;
+			}
+		}
+	}
+}
+@media (min-width: 1000px) {
+	.testimonies {
+		padding: 30px 0;
+		&__title {
+			&::after {
+				top: 130px;
+			}
+		}
+		&__slider {
+			&__item {
+			 padding-left: 9%;
+			 padding-right: 9%;
+			}
+		}
+	}
+}

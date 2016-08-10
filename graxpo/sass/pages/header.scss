@@ -1,0 +1,37 @@
+.site-header{
+	z-index: 999;
+	position: absolute;
+	right: 0;
+	top: 0;
+	background-color: transparent;
+	width: 100%;
+	transition: 0.5s;
+	&--fixed {
+		position: fixed;
+		background-color: $brand-main;
+		padding-top: 0;
+		transition: 0.5s;
+	}
+}
+@media (min-width: 1000px) {
+	.site-header{
+		box-sizing: border-box;
+		background-color: transparent;
+		padding-top: 30px;
+		padding-left: calc(50% - 480px);
+		padding-right: calc(50% - 480px);
+		&--fixed {
+		position: fixed;
+		background-color: $brand-main;
+		padding-top: 0;
+		transition: 0.5s;
+	}
+	}
+}
+
+@media (min-width: 1200px) {
+	.site-header {
+			padding-left: calc(50% - 580px);
+			padding-right: calc(50% - 580px);
+	}
+}

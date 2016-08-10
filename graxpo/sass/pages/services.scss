@@ -1,0 +1,137 @@
+.service {
+	background-color: $brand-bg;
+	padding-top: 100px;
+	&__intro {
+		padding: 20px;
+		position: relative;
+		text-align: center;
+		&__title {
+			animation: 1s slide-down backwards paused;
+			@extend %header;
+			&::after {
+				animation: 1s slide-down backwards;
+			}
+		}
+		&__description {
+			animation: 1s slide-down 0.1s backwards paused;
+			@extend %description;
+		}
+	}
+	&__content {
+		background-color: $brand-main;
+		text-align: center;
+		padding: 20px;
+		padding-bottom: 40px;
+		&__list {
+			&__item {
+				position: relative;
+				padding: 10px 0;
+				&__text {
+					&__title {
+						@extend %header2;
+						color: $brand-white;
+						&::after {
+							top: 75px;
+						}
+					}
+					&__description {
+						@extend %description;
+						color: $brand-white;
+						padding-top: 20px;
+					}
+				}
+				&__pic {
+					padding-top: 15px;
+					&>img {
+						width: 100%;
+					}						
+				}
+				&:nth-child(1) {
+					animation: 1s slide-right 0.5s backwards paused;
+				}
+				&:nth-child(2) {
+					animation: 1s slide-left 0.8s backwards paused;
+				}
+				&:nth-child(3) {
+					animation: 1s slide-right 1.1s backwards paused;
+				}
+			}
+		}
+	}
+}
+@media (min-width: 450px) {
+	.service {
+		&__content {
+		padding-left: calc(50% - 220px);
+		padding-right: calc(50% - 220px);
+		overflow: hidden;
+		}
+	}
+}
+@media (min-width: 900px) {
+	.service {
+		&__content {
+			padding: 0;
+			&__list {
+				padding: 0;
+				&__item {
+					overflow: hidden;
+					padding: 0;
+					&__text {
+						width: 60%;
+						float: right;
+						padding: 20px;
+						padding-bottom: 0;
+						box-sizing: border-box;
+						text-align: left;
+						padding-left: 40px;
+						&__title {
+							padding-left: 0;
+							&::after {
+								top: 105px;
+								left: calc(50% - 50px);
+								color: $brand-white;
+							}
+						}
+						&__description {
+							padding-top: 35px;
+							line-height: 180%;
+							letter-spacing: 1px;
+						}
+					}
+					&__pic {
+						padding: 0;
+						width: 40%;
+						&>img {
+							width: 100%;
+						}						
+					}
+					&:nth-child(2) {
+						.service__content__list__item__text {
+							float: left;
+							&__title {
+								padding-left: 0px;
+								padding-right: 40px;
+								&::after {
+									left: 40px;
+								}
+							}
+						}
+						.service__content__list__item__pic {
+							display: inline-block;	
+						}
+					}
+				}
+			}
+		}
+	}
+}
+@media (min-width: 1000px) {
+	.service {
+		&__content {
+			padding: 130px 0;
+			padding-left: calc(50% - 480px);
+			padding-right: calc(50% - 480px);
+		}
+	}
+}

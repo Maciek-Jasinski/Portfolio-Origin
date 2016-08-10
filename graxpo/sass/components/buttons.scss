@@ -1,0 +1,19 @@
+%button {	
+	border: none;
+	@include font-size($button-font-sizes);
+	background-color: $brand-main;
+	border-radius: 7px;
+	color: $brand-white;
+	text-transform: uppercase;
+	font-weight: bold;
+	text-align: center;
+	padding: 10px 18px;
+	margin: 4px;
+	cursor: pointer;
+	&:hover{
+			cursor: pointer;
+			box-shadow: 0px 10px 10px 0px rgba(0,0,0,0.45);
+			transition: 0.3s;
+			background-color: $brand-buttonh;
+		}
+}

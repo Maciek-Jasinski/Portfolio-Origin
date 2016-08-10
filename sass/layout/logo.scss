@@ -1,0 +1,15 @@
+%logo {
+	width: 140px;
+	height: 140px;
+	background-color: $brand-white;
+	transform: rotate(45deg);
+	}
+%content {
+	position: absolute;
+	top: 9px;
+	left: 50px;
+	color: $brand-green;
+	@include font-size($logo-font-sizes);
+	font-family: $base-font;
+	transform: rotate(-45deg);
+}

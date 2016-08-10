@@ -1,0 +1,22 @@
+html {
+   font-size: 62.5%;
+}
+
+body {
+   font-size: 1.5em;
+   background-color: $brand-white;
+   font-family: $logo-font;
+   position: relative;
+   min-width: 300px;
+   margin: 0;
+   overflow: hidden;
+   
+}
+
+.site-main,{
+   overflow: hidden;
+   width: 100%;
+   position: relative;
+}
+
+

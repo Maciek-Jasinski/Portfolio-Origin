@@ -1,0 +1,8 @@
+%description {
+	@include font-size($description-item-font-sizes);
+	color: $brand-gray-description;
+	font-family: $description-font;
+	padding-top: 50px;
+	padding-bottom: 20px;
+	line-height: 150%;
+}

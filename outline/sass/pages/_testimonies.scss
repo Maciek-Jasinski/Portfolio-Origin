@@ -1,0 +1,84 @@
+.testimonies{
+	&__users{
+		padding: 70px 20px;
+		background-color: $brand-primary;
+		&__list {
+			overflow: hidden;
+			width: 300%;
+			position: relative;
+			&__item{
+				animation: 1s slide-up backwards paused;
+				width: 33.33%;
+				box-sizing: border-box;
+				float: left;
+				&__pic{
+					width: 120px;
+					height: 120px;
+					border-radius: 50%;
+					float: left;
+				}
+				&__desc{
+					box-sizing: border-box;
+					padding-left: 160px;
+					padding-right: 20px;
+					color: $brand-white;
+					@include font-size($description-header-font-sizes);
+					font-family: $font-opensans;
+					line-height: 150%;
+				}
+				&__sign{
+					padding-left: 160px;
+					padding-top: 40px;
+					color: white;
+					@extend %h3;
+					text-transform: uppercase;
+					text-align: left;
+					&>span{
+						color: black;
+					}
+				}
+			}
+		}
+		&__switcher {
+		padding-top: 40px;
+		text-align: center;
+		&__item{
+			width: 15px;
+			height: 15px;
+			margin: 0 8px;
+			border-radius: 50%;
+			display: inline-block;
+			background-color: $brand-gray;
+			transition:0.3s;
+			&:hover{
+				cursor: pointer;
+				background-color: $brand-gray;
+				transition: 0.3s;
+			}
+		}
+	}	
+}
+	&__numbers{
+		background: url(../images/bg_1.jpg) no-repeat;
+		background-attachment: fixed;
+		background-size: cover;
+		padding: 70px 20px;
+		&__list__item{
+			animation: 1s slide-up backwards paused;
+			padding: 10px;
+			color: white;
+			text-align: center;
+			&>span{
+				font-size: 4em;
+			}
+			&__desc{
+				text-transform: uppercase;
+				letter-spacing: 5px;
+				@include font-size($description-font-sizes);
+				padding: 20px 0;
+			}
+
+		}
+	}
+}
+

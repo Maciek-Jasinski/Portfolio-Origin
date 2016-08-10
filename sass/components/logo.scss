@@ -1,0 +1,23 @@
+.container {
+	display: none;
+	position: fixed;
+	top: calc(50vh - 70px);
+	left: calc(50vw - 70px);
+	z-index: 150;
+}
+.container.active .logo__content{
+	opacity: 0;
+}
+.logo {
+	@extend %logo;
+	&__content {
+		@extend %content;
+		color: $brand-green;
+		transition: 0.1s;
+	}
+}
+.active {
+	color: white;
+	transform: scale(8);
+	transition: 0.2s;
+}

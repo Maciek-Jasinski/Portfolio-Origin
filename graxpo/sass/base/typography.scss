@@ -1,0 +1,83 @@
+$description-font: 'Open Sans', sans-serif;
+$logo-font: 'Leckerli One', cursive;
+$header-font: 'Roboto Condensed', sans-serif;
+
+$breakpoints: (
+  'small': 550px,
+  'medium': 750px,
+  'large': 1000px,
+);
+$h1-font-sizes: (
+  'null'  : 2.5em,
+  'medium': 2.8em,
+  'large': 3em
+);
+$h2-font-sizes: (
+  'null'  : 1.5em,
+  'medium': 2.8em,
+  'large' : 2.8em
+);
+$h3-font-sizes: (
+  'null'  : 1.1em,
+  'small' : 1.1em,
+  'medium': 1.2em,
+);
+$h4-font-sizes: (
+  'null'  : 1em,
+  'small' : 1em,
+  'medium': 1.1em,
+);
+$logo-font-sizes: (
+  'null'  : 2em,
+);
+$menu-font-sizes: (
+  'null'  : 1.1em,
+  'medium': 1.4em,
+);
+$menu-item-font-sizes: (
+  'null'  : 1.0em,
+  'large' : 1.1em
+);
+$description-header-font-sizes: (
+  'null'  : 1.5em,
+  'small' : 1.6em,
+  'medium': 1.6em,
+);
+$description-font-sizes: (
+  'null' : 1em,
+  'small': 1.2em,
+  'medium' : 1.2em,
+);
+$description-item-font-sizes: (
+  'null' : 0.8em,
+  'small': 0.8em,
+  'medium' : 0.9em,
+  'large': 0.95em,
+);
+$button-font-sizes: (
+  'null' : 0.8em,
+  'small': 0.8em,
+  'medium' : 0.9em,
+);
+$team-cover-item-sizes: (
+  'null' : 0.9em,
+  'small': 1.1em,
+  'medium' : 0.9em,
+);
+$downline-font-sizes: (
+  'null'  : 0.9em,
+  'medium' : 1.1em,
+);
+
+
+
+$brand-after: #898989;
+$brand-home-bg: #e1e1e1;
+$brand-white: #fff;
+$brand-black: #000;
+$brand-light-black: #333b46;
+$brand-gray-description: #81868e;
+$brand-main: #e84c3d;
+$brand-buttonh: #c62a1b;
+$brand-bg: #f0f0f0;
+$brand-field: #ebebeb;

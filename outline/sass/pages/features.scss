@@ -1,0 +1,70 @@
+.features{
+	padding: 70px 15px;
+	background-color: $brand-light-gray;
+	&__title{
+		animation: 1s slide-up backwards paused;
+		@extend %h2;
+	}
+	&__description{
+		animation: 1s slide-up 0.5s backwards paused;
+		@extend %desc;
+	}
+	&__list {
+		text-align: center;
+		&__item {
+			max-width: 400px;
+			margin: 30px auto;
+			box-sizing: border-box;
+			padding: 60px 20px;
+			background-color: $brand-white;
+			text-align: center;
+			transition: 1s;
+			&>i{
+				padding: 10px;
+				border: 2px solid $brand-primary;
+				border-radius: 50%;
+				color: $brand-primary;
+				font-size: 3.5em;
+				transition: 0.5s;
+			}
+			&__title{
+				@extend %h3;
+			}
+			&__description{
+				@extend %desc2;
+			}
+			&:nth-child(1) {
+				margin-top: 50px;
+			}
+			&:hover{
+				box-shadow: 0px 3px 40px 3px rgba(180,190,197,0.6);
+				transition: 0.5s;
+			}
+			&:hover > i{
+				background-color: $brand-primary;
+				color: white;
+				transition: 0.5s;
+			}
+		}
+	}
+
+	&__button{
+		animation: 1s slide-up 1.5s backwards paused;
+		@extend %button;
+		margin-top: 30px;
+		margin-left:  calc(50% - 125px);
+	}
+}
+
+	.features__list>a:nth-child(1){
+			animation: 1s slide-up 1s backwards paused;
+		}
+	.features__list>a:nth-child(2){
+			animation: 1s slide-up 1.4s backwards paused;
+		}
+	.features__list>a:nth-child(3){
+			animation: 1s slide-up 1.7s backwards paused;
+		}
+	.features__list>a:nth-child(4){
+			animation: 1s slide-up 2.0s backwards paused;
+		}

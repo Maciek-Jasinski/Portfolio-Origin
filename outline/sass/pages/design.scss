@@ -1,0 +1,49 @@
+.design{
+	padding: 70px 15px;
+	background-color: $brand-white;
+	&__title{
+		animation: 1s slide-up backwards paused;
+		@extend %h2;
+	}
+	&__description{
+		animation: 1s slide-up 0.5s backwards paused;
+		@extend %desc;
+		padding-bottom: 30px;
+	}
+	&__list__item,
+	&__list2__item{
+		max-width: 400px;
+		margin: 0 auto;
+		box-sizing: border-box;
+		padding: 20px 10px;
+		text-align: center;
+		&>i{
+			padding: 10px;
+			color: $brand-primary;
+			font-size: 2.5em;
+		}
+		&__title{
+			@extend %h3;
+		}
+		&__description{
+			@extend %desc2;
+		}
+	}
+	&__list__item{
+		animation: 1s slide-left 1.4s backwards paused;
+	}
+	&__list2__item{
+		animation: 1s slide-right 1.4s backwards paused;
+	}
+
+	&__items{
+		animation: 1s slide-up 0.9s backwards paused;
+		box-sizing: border-box;
+		padding-top: 30px;
+		padding-left: calc(50% - 300px);
+		&>img{
+			width: 100%;
+			max-width: 600px;
+		}
+	}
+}

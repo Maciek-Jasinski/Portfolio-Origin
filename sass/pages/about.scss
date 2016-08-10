@@ -1,0 +1,38 @@
+.about {
+	overflow: hidden;
+	height: 100vh;
+	position: absolute;
+	top: 0;
+	left: 0;
+	display: none;
+	&__description {
+		@extend %description;
+		background-color: $brand-dark-gray;
+		&__title {
+			@extend %header;
+			&::before {
+				@extend %header::before;
+			}
+			&::after {
+				@extend %header::after;
+			}
+		}
+		&__informations {
+			@extend %informations;
+		}
+		&__logo {
+			@extend %logo;
+			&__content {
+				@extend %content;
+			}
+		}
+	}
+	&__photo {
+		@extend %photo;
+		background-color: $brand-light-sand;
+		&>img {
+		animation: 2s slide-up backwards;
+			width: 85%;
+		}
+	}
+}

@@ -1,0 +1,31 @@
+.logo{
+	width: 130px;
+	margin: 15px 30px;
+	margin-right: 0;
+	display: inline-block;
+	border: 3px solid  $brand-white;
+	z-index: 1500;
+	&__text{
+		padding: 7px 12px;
+		text-transform: uppercase;
+		color: $brand-white;
+		@include font-size($logo-font-sizes);
+		font-weight: bold;
+		letter-spacing: 2px;
+		text-align: center;
+	}
+	&:hover{
+		cursor: pointer;
+		color: $brand-footer;
+	}
+}
+
+.site-header--fixed .logo__text{
+	color: $brand-black;
+}
+
+.site-header--fixed .logo{
+	margin-top: 0;
+	border-color: $brand-black;
+}
+

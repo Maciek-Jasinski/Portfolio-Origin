@@ -1,0 +1,30 @@
+.ideas {
+	background: url(../images/bg2.jpg) center no-repeat;
+	background-color: rgba(0, 0, 0, 0.8);
+	background-blend-mode: multiply;
+	background-attachment: fixed;
+	background-size: cover;
+	text-align: center;
+	padding: 60px 20px;
+	text-transform: uppercase;
+	color: #dadada;
+	&__title {
+		animation: 1s bg backwards paused;
+		font-weight: 300;
+		@include font-size($h2-font-sizes);
+		line-height: 130%;
+		letter-spacing: 1px;
+		padding-bottom: 20px;
+	}
+	&__description {
+		animation: 1s bg 0.3s backwards paused;
+		@include font-size($description-font-sizes);
+		font-weight: 300;
+		padding-bottom: 15px;
+	}
+	&__button {
+		animation: 1s slide-up 0.6s backwards paused;
+		@extend %button;
+		margin-top: 25px;
+	}
+}

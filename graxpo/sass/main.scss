@@ -1,0 +1,25 @@
+@charset 'utf-8';
+
+@import 'helpers/mixins';
+
+@import 'base/reset';
+@import 'base/typography';
+@import 'base/base';
+
+@import 'components/animations';
+@import 'components/navigation';
+@import 'components/logo';
+@import 'components/buttons';
+
+@import 'layout/headers';
+@import 'layout/descriptions';
+
+@import 'pages/header';
+@import 'pages/home';
+@import 'pages/about';
+@import 'pages/ideas';
+@import 'pages/services';
+@import 'pages/team';
+@import 'pages/testimonies';
+@import 'pages/contact';
+@import 'pages/footer';

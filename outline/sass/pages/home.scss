@@ -1,0 +1,53 @@
+.home{
+	overflow: hidden;
+	margin-top: -100px;
+	padding-top: 270px;
+	padding: 0 30px;
+	position: relative;
+	background: url(../images/bg_2.jpg) left no-repeat;
+	background-size: cover;
+	&__desc__title{
+		animation: 1s slide-up backwards;
+		@include font-size($h1-font-sizes); 
+		color: $brand-white;
+		letter-spacing: 1.5px;
+		font-weight: bold;
+		text-align: left;
+	}
+	&__desc__description{
+		animation: 1s slide-up 0.4s backwards;
+		padding-top: 20px;
+		color: $brand-white;
+		@include font-size($description-header-font-sizes);
+		font-family: $font-opensans;
+		letter-spacing: 1px;
+		line-height: 150%;
+	}
+	&__pic{
+		animation: 1s slide-up 0.8s backwards;
+		display: none;
+		text-align: right;
+	}
+	&__desc__button{
+		animation: 1s slide-up 0.8s backwards;
+		@extend %button;
+		margin: 60px 0;
+		padding-left: 35px;
+		padding-bottom: 5px;
+		font-size: 1em;
+		font-weight: bold;
+		text-align: center;
+		text-transform: uppercase;
+		&>i{
+			position: absolute;
+			top: 15px;
+			left: 20px;
+			font-size: 1.7em;
+		}
+		&:hover{
+			cursor: pointer;
+			box-shadow: 0px 10px 10px 0px rgba(0,0,0,0.45);
+			transition: 0.3s;
+		}
+	}
+}

@@ -1,0 +1,40 @@
+@keyframes slide-up{
+	from{transform: translateY(40px);
+		opacity: 0;}
+	to{transform: translateY(0);
+		opacity: 1;}
+}
+@keyframes slide-left{
+	from{transform: translateX(25vw);
+		opacity: 0;}
+	to{transform: translateX(0);
+		opacity: 1;}
+}
+@keyframes slide-right{
+	from{transform: translateX(-25vw);
+		opacity: 0;}
+	to{transform: translateX(0);
+		opacity: 1;}
+}
+@keyframes slide-down{
+	from{transform: translateY(-40px);
+		opacity: 0;}
+	to{transform: translateY(0);
+		opacity: 1;}
+}
+@keyframes bg{
+	from{opacity:0}
+	to{opacity:1}
+}
+@keyframes slide-left1{
+	from{transform: translateX(15vw);
+		opacity: 0;}
+	to{transform: translateX(0);
+		opacity: 1;}
+}
+@keyframes slide-right1{
+	from{transform: translateX(-15vw);
+		opacity: 0;}
+	to{transform: translateX(0);
+		opacity: 1;}
+}

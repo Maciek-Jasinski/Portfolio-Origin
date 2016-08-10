@@ -1,0 +1,37 @@
+@charset 'utf-8';
+
+@import "helpers/mixins";
+
+@import "base/reset"; 
+@import "base/typography";
+@import "base/base"; 
+
+
+
+@import "components/animations";
+@import "components/links";
+@import "components/photos";
+@import "components/buttons";
+@import "components/logo";
+@import "components/navigation";
+
+
+
+@import "layout/headers";
+@import "layout/descriptions";
+
+@import "pages/header";
+@import "pages/home";
+@import "pages/clients";
+@import "pages/features";
+@import "pages/design";
+@import "pages/testimonies";
+@import "pages/products";
+@import "pages/benefits";
+@import "pages/app-spot";
+@import "pages/pricing";
+@import "pages/faqs";
+@import "pages/sign-up";
+@import "pages/footer";
+
+@import "components/media";

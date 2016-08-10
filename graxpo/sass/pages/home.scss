@@ -1,0 +1,224 @@
+.home {
+	background-color: $brand-home-bg;
+	padding-top: 170px;
+	text-align: center;
+	text-transform: uppercase;
+	position: relative;
+	&__title {
+		animation: 1s zoom-in backwards;
+		@include font-size($h1-font-sizes);
+		font-family: $header-font;
+		color: $brand-light-black;
+		padding-bottom: 10px;
+	}
+	&__description {
+		animation: 1s zoom-in backwards;
+		@include font-size($description-header-font-sizes);
+		color: $brand-gray-description;
+	}
+	&__thing1,
+	&__thing2,
+	&__thing3,
+	&__thing3,
+	&__thing5,
+	&__thing6 {
+		display: none;
+	}
+	&__thing4 {
+		animation: 2s bg 0.3s backwards;
+		position: absolute;
+		bottom: 210px;
+		left: 10px;
+		width: 180px;
+			&>img {
+				width: 100%;
+			}
+	}
+	&__thing7 {
+		animation: 2s bg 0.4s backwards;
+		position: absolute;
+		bottom: 40px;
+		right: 0;
+		width: 160px;
+			&>img {
+				width: 100%;
+			}
+	}
+	&__scroll {
+		padding-top: 300px;
+		padding-bottom: 15px;
+		&__description {
+			color: $brand-main;
+			@include font-size($team-cover-item-sizes);
+		}
+	}
+}
+
+@media (min-width: 550px) {
+	.home {
+		&__title {
+			padding-top: 40px;
+		}
+		&__thing4 {
+			bottom: 260px;
+			left: 100px;
+			width: 160px;
+		}
+		&__thing5{
+			animation: 2s bg 0.5s backwards;
+			display: block;
+			position: absolute;
+			bottom: 120px;
+			left: 50px;
+			width: 150px;
+			&>img {
+				width: 100%;
+			}
+		}
+		&__thing6 {
+			animation: 2s bg 0.6s backwards;
+			display: block;
+			position: absolute;
+			bottom: 70px;
+			left: 40px;
+			width: 150px;
+			&>img {
+				width: 100%;
+			}
+		}
+		&__thing7 {
+			bottom: 100px;
+			right: 40px;
+		}
+		&__scroll {
+			padding-top: 350px;
+		}
+	}
+}
+@media (min-width: 750px) {
+	.home {
+		&__title {
+			padding-top: 90px;
+		}
+		&__thing3 {
+			animation: 2s bg 0.7s backwards;
+			display: block;
+			position: absolute;
+			bottom: 80px;
+			right: 200px;
+			width: 70px;
+			&>img {
+				width: 100%;
+			}
+		}
+		&__thing4 {
+			bottom: 290px;
+			left: 150px;
+		}
+		&__thing5{
+			bottom: 150px;
+			left: 90px;
+		}
+		&__thing6 {
+			bottom: 110px;
+			left: 80px;
+		}
+		&__thing7 {
+			bottom: 130px;
+			right: 50px;
+		}
+		&__scroll {
+			padding-top: 350px;
+		}
+	}
+}
+@media (min-width: 1000px) {
+	.home {
+		&__title {
+			padding-top: 140px;
+		}
+		&__thing1 {
+			animation: 2s bg 0.8s backwards;
+			display: block;
+			position: absolute;
+			top: 180px;
+			left: -100px;
+			width: 300px;
+			&>img {
+				width: 100%;
+			}
+		}
+		&__thing2 {
+			animation: 2s bg 0.9s backwards;
+			display: block;
+			position: absolute;
+			top: 250px;
+			right: 40px;
+			width: 160px;
+			&>img {
+				width: 100%;
+			}
+		}
+		&__thing3 {
+			bottom: 50px;
+			right: 300px;
+		}
+		&__thing4 {
+			bottom: 250px;
+			left: 210px;
+		}
+		&__thing5{
+			bottom: 140px;
+			left: 120px;
+		}
+		&__thing6 {
+			bottom: 100px;
+			left: 110px;
+		}
+		&__thing7 {
+			bottom: 80px;
+			right: 110px;
+		}
+		&__scroll {
+			padding-top: 300px;
+		}
+	}
+}
+@media (min-width: 1200px) {
+	.home {
+		&__title {
+			padding-top: 140px;
+		}
+		&__thing1 {
+			top: 180px;
+			left: -100px;
+		}
+		&__thing2 {
+			top: 230px;
+			right: 40px;
+		}
+		&__thing3 {
+			bottom: 50px;
+			right: 350px;
+		}
+		&__thing4 {
+			bottom: 140px;
+			left: 300px;
+		}
+		&__thing5{
+			bottom: 70px;
+			left: 120px;
+		}
+		&__thing6 {
+			bottom: 30px;
+			left: 110px;
+		}
+		&__thing7 {
+			bottom: 40px;
+			right: 120px;
+		}
+		&__scroll {
+			padding-top: 200px;
+		}
+	}
+}

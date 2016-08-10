@@ -1,0 +1,93 @@
+.site-footer{
+	height: 500px;
+	width: 100%;
+	box-sizing: border-box;
+	padding: 20px 30px;
+	position: relative;
+	position: fixed;
+	bottom: 0;
+	z-index: 2;
+	background-color: #323a45;
+	color: white;
+}
+
+
+.contact{
+	width: 200px;
+	margin: 0 auto;
+	text-align: center;
+	&__logo{
+		width: 140px;
+		height: 50px;
+		margin: 0 auto;
+		margin-top: 30px;
+		box-sizing: border-box;
+		padding: 10px;
+		border: 2px solid  $brand-footer;
+		font-size: 1.4em;
+		color: $brand-footer;
+		letter-spacing: 2px;
+		text-transform: uppercase;
+		text-align: center;
+	}
+	&__desc{
+		padding: 10px 0;
+		color: $brand-footer;
+		font-size: 0.8em;
+		line-height: 280%;
+		&>a{
+			color: $brand-footer;
+			transition: 0.5s;
+			&:hover{
+				color: $brand-white;
+				text-decoration: underline;
+				transition: 0.5s;
+			}
+		}
+	}
+	&__list__item {
+		padding: 0 5px;
+		display: inline-block;
+		color: $brand-footer;
+		font-size: 1.2em;
+		transition: 0.5s;
+		&:hover{
+			cursor: pointer;
+			color: $brand-primary;
+			transition: 0.5s;
+		}
+	}
+}
+
+.informations{
+	margin-top: 30px;
+	&__list__item{
+		box-sizing: border-box;
+		padding-top: 30px;
+		text-align: center;
+		&:nth-child(2),
+		&:nth-child(3) {
+			display: none;
+			
+		}		
+		&__title{
+			padding-bottom: 20px 0;
+			color: white;
+			font-size: 1em;
+			letter-spacing: 3px;
+		}
+		&__link{
+			padding: 5px 0;
+			display: block;
+			color: $brand-footer;
+			font-size: 1.1em;
+			font-family: $font-opensans;
+			transition: 0.5s;
+			&:hover{
+				color: $brand-primary;
+				text-decoration: underline;
+				transition: 0.5s;
+			}
+		}
+	}
+}

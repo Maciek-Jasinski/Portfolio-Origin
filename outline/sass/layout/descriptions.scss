@@ -1,0 +1,18 @@
+%desc{
+	padding: 10px;
+	color: $brand-des-gray;
+	@include font-size($description-font-sizes);
+	font-family: $font-opensans;
+	line-height: 160%;
+	text-align: center;
+}
+
+%desc2{
+	padding: 10px 10px;
+	color: $brand-des-gray;
+	@include font-size($description-item-font-sizes);
+	font-family: $font-opensans;
+	line-height: 130%;
+	letter-spacing: 0.5px;
+	text-align: center;
+}

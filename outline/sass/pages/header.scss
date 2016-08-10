@@ -1,0 +1,19 @@
+.site-header{
+	height: 80px;
+	width: 100%;
+	margin-left: 500px;
+	padding-top: 25px;
+	position: absolute;
+	top: 0px;
+	right: 0px;
+	transition: 0.5s;
+	&--fixed{
+		height: auto;
+		border-bottom: 1px solid #dddddd;
+		position: fixed;
+		z-index: 1500;
+		background-color: $brand-white;
+		color: $brand-black; 
+		transition: 0.5s;
+	}
+}

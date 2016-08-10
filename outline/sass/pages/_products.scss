@@ -1,0 +1,62 @@
+.products{
+	padding: 70px 25px;
+	background-color: $brand-light-gray;
+	&__title{
+		animation: 1s slide-up backwards paused;
+		@extend %h2;
+	}
+	&__desc{
+		animation: 1s slide-up 0.3s backwards paused;
+		@extend %desc;
+	}
+	&__list__item{
+		max-width: 400px;
+		margin: 20px auto;
+		box-sizing: border-box;
+		background-color: $brand-white;
+		text-align: center;
+		&__container{
+			overflow: hidden;
+		}
+		&__container>img{
+				width: 100%;
+				transition: 1s;
+		}
+		&__title{
+			@extend %h3;
+			padding-top: 40px;
+		}
+		&__desc{
+			@extend %desc2;
+			padding-bottom: 60px;
+		}
+		&:hover{
+			cursor: pointer;
+			box-shadow: 0px 3px 40px 3px rgba(130,150,157,0.6);
+			transition: 0.5s;
+		}
+		&:hover .products__list__item__container>img{
+			transform: scale(1.2);
+			transition: 0.6s;
+		}
+		&:nth-child(1){
+			animation: 1s slide-up 0.6s backwards paused;
+			margin-top: 60px;
+		}
+		&:nth-child(2){
+			animation: 1s slide-up 0.9s backwards paused;
+		}
+		&:nth-child(3){
+			animation: 1s slide-up 1.2s backwards paused;
+		}
+		&:nth-child(4){
+			animation: 1s slide-up 1.5s backwards paused;
+		}
+	}
+	&__button{
+		animation: 1s slide-up 1.8s backwards paused;
+		margin-top: 30px;
+		margin-left: calc(50% - 125px);
+		@extend %button;
+	}
+}

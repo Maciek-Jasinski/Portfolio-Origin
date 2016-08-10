@@ -1,0 +1,8 @@
+.site-footer {
+	text-align: center;	
+	background-color: $brand-main;
+	padding: 20px 0;
+	color: $brand-white;
+	font-weight: 300;
+	@include font-size($description-font-sizes);
+}

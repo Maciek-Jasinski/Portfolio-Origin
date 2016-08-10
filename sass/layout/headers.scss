@@ -1,0 +1,28 @@
+%header {
+	animation: 2s bg backwards;
+	position: relative;
+	@include font-size($h3-font-sizes);
+	font-weight: 200;
+	letter-spacing: -6px; 
+	text-transform: uppercase;
+}
+%header::before {
+	animation: 1s slide-right1 backwards;
+	content: "";
+	width: 30%;
+	height: 2px;
+	position: absolute;
+	top: 0;
+	left: 0;
+	background-color: $brand-white;
+}
+%header::after {
+	animation: 1s slide-left1 backwards;
+	content: "";
+	width: 30%;
+	height: 2px;
+	position: absolute;
+	bottom: 0;
+	right: 0;
+	background-color: $brand-white;	
+}
