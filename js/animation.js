@@ -207,6 +207,8 @@ $(document).ready(function(){
 				}
 			});
 		});
+		//dupa jasia
+		
 		//}
 		if (div == 1 || div == 4) {
 			$('.container').fadeIn(100);
