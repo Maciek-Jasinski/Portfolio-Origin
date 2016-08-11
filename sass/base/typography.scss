@@ -8,48 +8,47 @@
   font-family: 'mmrtext';
   src: url('../font/mmrtext.ttf') format('truetype');
 }
-$base-font: 'Forum', cursive;;
+$base-font: 'Forum', cursive;
 $logo-font: 'Source Sans Pro', sans-serif;
 $home-font: 'Source Sans Pro', sans-serif;
 $breakpoints: (
   'small': 550px,
   'medium': 750px,
-  'large': 1000px,
+  'large': 900px,
 );
 $h1-font-sizes: (
-  'null'  : 4.5em,
-  'small': 2.5em,
-  'medium': 2.7em,
+  'null'  : 2.7em,
+  'small': 4em,
   'large': 4.5em
 );
 $h2-font-sizes: (
-  'null'  : 2em,
-  'small' : 2em,
-  'medium': 2.6em,
+  'null'  : 2.5em,
+  'small' : 3.8em,
   'large' : 4.2em
 );
 $h3-font-sizes: (
-  'null'  : 1.8em,
-  'small' : 1.8em,
+  'null'  : 3em,
+  'small' : 4em,
   'medium': 4.5em,
 );
 $h4-font-sizes: (
-  'null'  : 1.3em,
-  'small' : 1.4em,
-  'medium': 10em,
+  'null'  : 5em,
+  'small' : 8em,
+  'large': 10em,
 );
 $h5-font-sizes: (
-  'null'  : 1.3em,
-  'small' : 1.4em,
-  'medium': 6em,
+  'null'  : 3em,
+  'small' : 4em,
+  'medium' : 4.5em,
+  'large': 6em,
 );
 $border-font-sizes: (
-  'null'  : 1.3em,
-  'small' : 1.4em,
-  'medium': 1.6em,
+  'null'  : 1em,
+  'small' : 1.3em,
+  'large': 1.6em,
 );
 $logo-font-sizes: (
-  'null'  : 2em,
+  'null'  : 2.5em,
   'large' : 7em,
 );
 $value-font-sizes: (
@@ -57,17 +56,35 @@ $value-font-sizes: (
   'large' : 1.1em,
 );
 $menu-font-sizes: (
-  'null'  : 1.1em,
+  'null'  : 2em,
   'medium': 1.4em,
   'large' : 2.5em,
 );
 $description-font-sizes: (
   'null' : 1em,
-  'small': 1.2em,
-  'medium' : 1.5em,
+  'small': 1.4em,
+ // 'medium' : 1.5em,
 );
 $button-font-sizes: (
   'large' : 1.2em,
+);
+$number-font-sizes: (
+  'null' : 1.5em,
+  'small': 1.7em,
+  'medium' : 1.9em,
+  'large' : 2.6em,
+);
+$mail-font-sizes: (
+  'null' : 1.2em,
+  'small': 1.4em,
+  'medium' : 1.5em,
+  'large' : 1.8em,
+);
+$copyright-font-sizes: (
+  'null' : 1em,
+  'small': 1.1em,
+  'medium' : 1.1em,
+  'large' : 1.5em,
 );
 
 

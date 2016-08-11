@@ -2,6 +2,24 @@
 	width: 200px;
 	height: 20px;
 	margin: 20px auto;
+	margin-top: -137%;
+	padding: 15px 0;
+	display: block;
+	background-color: transparent;
+	color: $brand-black;
+	@include font-size($button-font-sizes);
+	font-weight: 500;
+	letter-spacing: 2px;;
+	text-transform: uppercase;
+	text-align: center;
+	transition: 0.5s;
+}
+
+/*
+%button {
+	width: 200px;
+	height: 20px;
+	margin: 20px auto;
 	margin-left: calc(50% - 70px);
 	padding: 15px 0;
 	display: block;
@@ -14,6 +32,4 @@
 	text-align: center;
 	transition: 0.5s;
 }
-
-/*
 #D53CA1 */

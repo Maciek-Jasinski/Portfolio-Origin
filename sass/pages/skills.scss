@@ -6,6 +6,7 @@
 	left: 0;
 	display: none;
 	&__description {
+		opacity: 0.5;
 		@extend %description;
 		background-color: $brand-red;
 		&__title {
@@ -18,6 +19,8 @@
 			}
 		}
 		&__informations {
+			display: none;
+			
 			@extend %informations;
 			padding-bottom: 50px;
 		}
@@ -26,7 +29,7 @@
 			width: 100%;				
 			&__item {
 				height: 100%;
-				margin-top: 20px;
+				margin-top: 60vh;
 				background-color: $brand-white;
 				display: none;
 				
@@ -47,21 +50,23 @@
 		}
 	}
 	&__icons {
-		@extend %photo;
-		padding-left: 8%;
-		background-color: $brand-gray;
+		margin-top: -70vh;
+		background-color: transparent;
 		&__list {
 			overflow: hidden;
 			width: 100%;
 			height: 100%;
+			box-sizing: border-box;
+			padding: 10px 20px;
 			&__item {
 				width: 33.33%;
 				height: 33.33%;
 				box-sizing: border-box;
 				padding: 25px;
 				float: left;
+				text-align: center;
 				&__img {
-					width: 100%;
+					width: 50px;
 					filter: grayscale(100%);
 					transition: 0.5s;
 				}
@@ -93,3 +98,173 @@
 		filter: grayscale(0%);
 	}
 }
+@media (min-width: 550px) {
+	.skills {
+		&__icons {
+			&__list {
+				padding-top: 50px;
+				&__item {
+					padding: 12px 10px;
+					&__img {
+						width: 65px;
+					}
+				}
+			}
+		}
+	}
+}
+@media (min-width: 900px) {
+	.skills {	
+		&__description {
+			width: 50vw;
+			padding-top: 100px;
+			float: left;
+			&__informations {
+				display: block;
+				padding-right: 90px;
+				padding-top: 50px;
+			}
+			&__bars {
+				&__item {
+					margin-top: 35vh;
+				}
+			}
+		}
+		&__icons {
+			width: 50vw;
+			height: 100vh;
+			margin-top: 0;
+			display: inline-block;
+			background-color: $brand-gray;
+			&__list {
+				padding: 25px;
+				padding-top: 75px;
+				padding-left: 80px;
+				&__item {
+					&__img {
+						width: 90px;
+					}
+				}
+			}
+		}
+	}
+}
+@media (min-width: 1000px) {
+	.skills {
+		&__description {
+			&__informations {
+				padding-right: 50px;
+			}
+		}
+	}
+}
+@media (min-width: 1200px) {
+	.skills {
+		&__icons {
+			&__list {
+				&__item {
+					&__img {
+						width: 110px;
+					}
+				}
+			}
+		}
+	}
+}
+
+
+//.skills {
+//	overflow: hidden;
+//	height: 100vh;
+//	position: absolute;
+//	top: 0;
+//	left: 0;
+//	display: none;
+//	&__description {
+//		@extend %description;
+//		background-color: $brand-red;
+//		&__title {
+//			@extend %header;
+//			&::before {
+//				@extend %header::before;
+//			}
+//			&::after {
+//				@extend %header::after;
+//			}
+//		}
+//		&__informations {
+//			@extend %informations;
+//			padding-bottom: 50px;
+//		}
+//		&__bars {
+//			height: 20px;
+//			width: 100%;				
+//			&__item {
+//				height: 100%;
+//				margin-top: 20px;
+//				background-color: $brand-white;
+//				display: none;
+//				
+//					&:nth-child(1) {
+//						display: block;
+//						width: 75%;
+//					}
+//				&__value {
+//					padding-top: 2px;
+//					@include font-size($value-font-sizes);
+//					text-align: right;
+//					margin-right: -35px;
+//					&:nth-child(1) {
+//						display: block;
+//					}
+//				}
+//				}
+//		}
+//	}
+//	&__icons {
+//		@extend %photo;
+//		padding-left: 8%;
+//		background-color: $brand-gray;
+//		&__list {
+//			overflow: hidden;
+//			width: 100%;
+//			height: 100%;
+//			&__item {
+//				width: 33.33%;
+//				height: 33.33%;
+//				box-sizing: border-box;
+//				padding: 25px;
+//				float: left;
+//				&__img {
+//					width: 100%;
+//					filter: grayscale(100%);
+//					transition: 0.5s;
+//				}
+//				&:hover .skills__icons__list__item__img {
+//					cursor: pointer;
+//					filter: grayscale(0%);
+//				}
+//				&:nth-child(1),
+//				&:nth-child(2),
+//				&:nth-child(3) {
+//					animation: 2s bg backwards;
+//				}
+//				&:nth-child(4),
+//				&:nth-child(5),
+//				&:nth-child(6) {
+//					animation: 2s bg 0.4s backwards;
+//				}
+//				&:nth-child(7),
+//				&:nth-child(8),
+//				&:nth-child(9) {
+//					animation: 2s bg 0.8s backwards;
+//				}
+//			}
+//		}
+//	}
+//}
+//.icon-hover {
+//	.skills__icons__list__item__img {
+//		filter: grayscale(0%);
+//	}
+//}

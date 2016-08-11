@@ -1,23 +1,62 @@
 .container {
 	display: none;
 	position: fixed;
-	top: calc(50vh - 70px);
-	left: calc(50vw - 70px);
+	top: 30px;
+	left: 30px;
 	z-index: 150;
-}
-.container.active .logo__content{
-	opacity: 0;
-}
-.logo {
-	@extend %logo;
-	&__content {
-		@extend %content;
-		color: $brand-green;
-		transition: 0.1s;
+	&__logo {
+		@extend %logo;
+		&__content {
+			@extend %content;
+			color: $brand-green;
+			transition: 0.1s;
+		}
 	}
+}
+.container.active .container__logo__content{
+	opacity: 0;
 }
 .active {
 	color: white;
 	transform: scale(8);
 	transition: 0.2s;
 }
+@media (min-width: 900px) {
+	.container {
+		top: calc(50vh - 70px);
+		left: calc(50vw - 70px);
+		&__logo {
+			width: 140px;
+			height: 140px;
+			&__content {
+				top: 9px;
+				left: 50px;
+			}
+		}
+	}
+}
+
+
+//.container {
+//	display: none;
+//	position: fixed;
+//	top: calc(50vh - 70px);
+//	left: calc(50vw - 70px);
+//	z-index: 150;
+//}
+//.container.active .logo__content{
+//	opacity: 0;
+//}
+//.logo {
+//	@extend %logo;
+//	&__content {
+//		@extend %content;
+//		color: $brand-green;
+//		transition: 0.1s;
+//	}
+//}
+//.active {
+//	color: white;
+//	transform: scale(8);
+//	transition: 0.2s;
+//}

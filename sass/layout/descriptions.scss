@@ -1,28 +1,59 @@
 %informations {
 	animation: 2s bg backwards;
+	width: 100%;
+	height: 152px;
+	max-width: 385px;
+	margin: 0 auto;
+	box-sizing: border-box;
+	padding: 50px;
 	font-family: $logo-font;
-	padding: 70px 180px;
 	@include font-size($description-font-sizes);
 	font-weight: 100;
 	line-height: 180%;
 	letter-spacing: 1px;
 }
 %description {
-	width: 50%;
+	width: 100vw;
 	height: 100%;
-	float: left;
 	box-sizing: border-box;
-	padding-top: 10%;
+	padding-top: 120px;
 	color: $brand-white;
 	text-align: center;
 	position: relative;
 }
 %photo {
-	width: 50%;
 	height: 100%;
-	display: inline-block;
 	box-sizing: border-box;
 	padding: 0 40px;
 	padding-top: 30px;
 	text-align: center;
 }
+
+//%informations {
+//	animation: 2s bg backwards;
+//	font-family: $logo-font;
+//	padding: 70px 180px;
+//	@include font-size($description-font-sizes);
+//	font-weight: 100;
+//	line-height: 180%;
+//	letter-spacing: 1px;
+//}
+//%description {
+//	width: 50%;
+//	height: 100%;
+//	float: left;
+//	box-sizing: border-box;
+//	padding-top: 10%;
+//	color: $brand-white;
+//	text-align: center;
+//	position: relative;
+//}
+//%photo {
+//	width: 50%;
+//	height: 100%;
+//	display: inline-block;
+//	box-sizing: border-box;
+//	padding: 0 40px;
+//	padding-top: 30px;
+//	text-align: center;
+//}

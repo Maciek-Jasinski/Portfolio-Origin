@@ -10,7 +10,7 @@
 	color: $brand-white;
 	text-align: center;
 	&__title {
-		margin-top: 7%;
+		margin-top: 120px;
 		@extend %header;
 		@include font-size($h5-font-sizes);
 		&::before {
@@ -22,32 +22,19 @@
 	}
 	&__description {
 		@extend %informations;
-		width: 50%;
-		box-sizing: border-box;
-		padding-top: 80px;
-		padding-left: 120px;
-		padding-right: 200px;
-		float: left;
+		padding-bottom: 20px;
 	}
 	&__number {
-		padding-top: 90px;
-		display: inline-block;
-		width: 50vw;
-		font-size: 3.2em;
-		padding-bottom: 40px;
+		padding-bottom: 20px;
+		@include font-size($number-font-sizes);
 	}
 	&__mail {
-		display: inline-block;
-		width: 50vw;
-		padding-bottom: 80px;
-		font-size: 2.2em;
+		padding-bottom: 40px;
+		@include font-size($mail-font-sizes);
 		letter-spacing: 1px;
 	}
 	&__social {
 		text-align: center;
-		position: absolute;
-		top: 73vh;
-		left: calc(50% - 74px);
 		&__icons {
 			display: inline-block;
 			font-size: 3em;
@@ -62,8 +49,146 @@
 		}
 	}
 	&__copyright {
-		font-size: 1.5em;
-		padding-top: 100px;
-	}
-	
+		@include font-size($copyright-font-sizes);
+		padding-top: 65px;
+	}	
 }
+@media (min-width: 550px) {
+	.contact {
+		&__description {
+			max-width: 500px;
+		}
+	}
+}
+@media (min-width: 750px) {
+	.contact {
+		&__mail {
+			padding-bottom: 30px;
+		}
+	}
+}
+
+@media (min-width: 900px) {
+	.contact {
+		&__title {
+			margin-top: 15vh;
+		}
+		&__description {
+			width: 50vw;
+			height: 50vh;
+			padding-top: 15vh;
+			padding-left: 120px;
+			padding-right: 170px;
+			float: left;
+		}
+		&__number {
+			display: inline-block;
+			width: 50vw;
+			box-sizing: border-box;
+			padding-top: 14vh;
+			padding-bottom: 40px;
+			padding-left: 50px;
+		}
+		&__mail {
+			display: inline-block;
+			box-sizing: border-box;
+			padding-left: 50px;
+		}
+		&__social {
+			position: absolute;
+			top: 74vh;
+			left: calc(50% - 74px);
+		}
+		&__copyright {
+			text-align: center;
+			padding-top: 30vh;
+		}
+	}
+}
+@media (min-width: 1000px) {
+	.contact {
+		&__description {
+			padding-right: 120px;
+		}
+	}
+}
+@media (min-width: 1200px) {
+	.contact {
+		&__description {
+			max-width: 2000px;
+			margin: 0 auto;
+			//padding-top: 10vh;
+			padding-right: 180px;
+			padding-left: 180px;
+		}
+	}
+}
+//.contact {
+//	overflow: hidden;
+//	height: 100vh;
+//	width: 100vw;
+//	position: absolute;
+//	top: 0;
+//	left: 0;
+//	display: none;
+//	background-color: $brand-red;
+//	color: $brand-white;
+//	text-align: center;
+//	&__title {
+//		margin-top: 7%;
+//		@extend %header;
+//		@include font-size($h5-font-sizes);
+//		&::before {
+//			@extend %header::before;
+//		}
+//		&::after {
+//			@extend %header::after;
+//		}
+//	}
+//	&__description {
+//		@extend %informations;
+//		width: 50%;
+//		box-sizing: border-box;
+//		padding-top: 80px;
+//		padding-left: 120px;
+//		padding-right: 200px;
+//		float: left;
+//	}
+//	&__number {
+//		padding-top: 90px;
+//		display: inline-block;
+//		width: 50vw;
+//		font-size: 3.2em;
+//		padding-bottom: 40px;
+//	}
+//	&__mail {
+//		display: inline-block;
+//		width: 50vw;
+//		padding-bottom: 80px;
+//		font-size: 2.2em;
+//		letter-spacing: 1px;
+//	}
+//	&__social {
+//		text-align: center;
+//		position: absolute;
+//		top: 73vh;
+//		left: calc(50% - 74px);
+//		&__icons {
+//			display: inline-block;
+//			font-size: 3em;
+//			padding:  0 5px;
+//			&__link {
+//				color: $brand-white;
+//				transition: 0.5s;
+//				&:hover {
+//					color: $brand-green;
+//				}
+//			}
+//		}
+//	}
+//	&__copyright {
+//		font-size: 1.5em;
+//		padding-top: 100px;
+//	}
+//	
+//}

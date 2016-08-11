@@ -6,14 +6,15 @@
 @import 'base/typography';
 @import 'base/base';
 
+@import 'layout/logo';
+@import 'layout/headers';
+@import 'layout/descriptions';
+
 @import 'components/logo';
 @import 'components/animations';
 @import 'components/navigation';
 @import 'components/buttons';
 
-@import 'layout/logo';
-@import 'layout/headers';
-@import 'layout/descriptions';
 
 @import 'pages/header';
 @import 'pages/home';
