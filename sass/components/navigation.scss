@@ -108,6 +108,14 @@
 		}
 	
 }
+@media (min-width: 900px ){
+	.navigation{
+		&__list {
+			width: 50vw;
+			right: -50vw;
+		}
+	}
+}
 //&__list {
 //		width: 50vw;
 //		height: 100vh;

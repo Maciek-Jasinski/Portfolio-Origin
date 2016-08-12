@@ -21,6 +21,11 @@
 	transform: scale(8);
 	transition: 0.2s;
 }
+.active-prelude {
+	color: white;
+	transform: scale(8);
+	transition: 0.2s;
+}
 @media (min-width: 900px) {
 	.container {
 		top: calc(50vh - 70px);

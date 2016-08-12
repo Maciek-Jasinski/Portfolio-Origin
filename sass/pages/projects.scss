@@ -47,11 +47,13 @@
 		text-transform: uppercase;
 		&::before {
 			@extend %header::before;
+			animation: 4s slide-right2 backwards;
 			height: 6px;
 			top: 30%;
 		}
 		&::after {
 			@extend %header::after;
+			animation: 4s slide-left2 backwards;
 			height: 6px;
 			bottom: 30%;
 		}
@@ -89,13 +91,14 @@
 			//display: inline-block;
 			background-color: transparent;
 			text-align: center;
-			z-index: 300;
+			position: relative;
+			z-index: 20;
 			&>img {
 				width: 81%;
 			}
 			&__button {
 				@extend %button;
-				color: $brand-black;
+				color: $brand-green;
 				&:hover {
 					background-color: $brand-green;
 					color: $brand-white;
@@ -112,7 +115,6 @@
 	left: 0;
 	display: none;
 		&__description {
-	opacity: 0.5;
 			@extend %description;
 			background-color: $brand-red;
 		&__title {
@@ -136,15 +138,16 @@
 			//display: inline-block;
 			background-color: transparent;
 			text-align: center;
-			z-index: 300;
+			position: relative;
+			z-index: 20;
 			&>img {
 				width: 81%;
 			}
 			&__button {
 				@extend %button;
-				color: $brand-black;
+				color: $brand-red;
 				&:hover {
-					background-color: $brand-green;
+					background-color: $brand-red;
 					color: $brand-white;
 				}
 			}
@@ -159,7 +162,6 @@
 	left: 0;
 	display: none;
 		&__description {
-	opacity: 0.5;
 			@extend %description;
 			background-color: $brand-dark-gray;
 		&__title {
@@ -183,7 +185,8 @@
 			//display: inline-block;
 			background-color: transparent;
 			text-align: center;
-			z-index: 300;
+			position: relative;
+			z-index: 20;
 			&>img {
 				width: 81%;
 			}
@@ -206,7 +209,6 @@
 	left: 0;
 	display: none;
 		&__description {
-	opacity: 0.5;
 			@extend %description;
 			background-color: $brand-gray;
 		&__title {
@@ -230,7 +232,8 @@
 			//display: inline-block;
 			background-color: transparent;
 			text-align: center;
-			z-index: 300;
+			position: relative;
+			z-index: 20;
 			&>img {
 				width: 81%;
 			}
@@ -296,11 +299,12 @@
 			box-sizing: border-box;
 			padding-left: 60px;
 			display: inline-block;
+			padding-top: calc(50vh - 200px);
 			&>img {
 				max-width: 500px;
 				width: 260px;
 				margin: auto;
-				padding-top: 13vh;
+				padding-top: 0;
 			}
 			&__button {
 				margin-top: 20px;
@@ -346,6 +350,7 @@
 	.project-3,
 	.project-4 {
 		&__photo {
+			padding-top: calc(50vh - 250px);
 			&>img {
 				width: 50%;
 			}

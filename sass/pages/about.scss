@@ -6,7 +6,6 @@
 	left: 0;
 	display: none;
 	&__description {
-		opacity: 0.5;
 		@extend %description;
 		background-color: $brand-dark-gray;
 		&__title {
@@ -29,10 +28,13 @@
 		max-width: 415px;
 		margin: 0 auto;
 		margin-top: -60vh;
+		position: relative;
+		z-index: 20;
+		opacity: 0.4;
 		@extend %photo;
 		background-color: transparent;
 		&>img {
-		animation: 2s slide-up backwards;
+			animation: 2s slide-up backwards;
 			width: 100%;
 		}
 	}
@@ -50,12 +52,12 @@
 	.about {
 		&__description {
 			width: 50vw;
-			padding-top: 100px;
+			padding-top: calc(30vh - 67px);
 			float: left;
 			&__informations {
 				max-width: 385px;
 				padding-right: 90px;
-				padding-top: 50px;
+				padding-top: 10vh;
 			}
 		}
 		&__photo {
@@ -87,7 +89,7 @@
 	.about {
 		&__description {
 			&__informations {
-				padding-top: 70px;
+				//padding-top: 70px;
 			}
 		}
 		&__photo {
