@@ -282,12 +282,12 @@
 	.project-4 {
 		&__description {
 			width: 50vw;
-			padding-top: 100px;
+			padding-top: calc(30vh - 67px);
 			float: left;
 			&__informations {
 				max-width: 350px;
 				padding-right: 90px;
-				padding-top: 85px;
+				padding-top: 10vh;
 				line-height: 200%;
 			}
 		}
@@ -357,6 +357,26 @@
 		}
 	}
 }
+@media (min-width: 1650px) {
+	.project-1,
+	.project-2,
+	.project-3,
+	.project-4 {
+		&__photo {
+			padding-top: calc(50vh - 300px);
+		}
+	}
+}@media (min-width: 1920px) {
+	.project-1,
+	.project-2,
+	.project-3,
+	.project-4 {
+		&__photo {
+			padding-top: calc(50vh - 350px);
+		}
+	}
+}
+
 //.projects-prelude {
 //	height: 100vh;
 //	width: 100%;
