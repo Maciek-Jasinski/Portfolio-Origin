@@ -71,7 +71,7 @@
 @media (min-width: 900px) {
 	.contact {
 		&__title {
-			margin-top: 15vh;
+			margin-top: calc(30vh - 90px);
 		}
 		&__description {
 			width: 50vw;
@@ -110,6 +110,9 @@
 		&__description {
 			padding-right: 120px;
 		}
+		&__number {
+			//padding-left: calc(50% - 450px);
+		}
 	}
 }
 @media (min-width: 1200px) {
@@ -117,12 +120,30 @@
 		&__description {
 			max-width: 2000px;
 			margin: 0 auto;
-			//padding-top: 10vh;
-			padding-right: 180px;
-			padding-left: 180px;
+			padding-right: calc(25vw - 180px);
+			padding-left: calc(25vw - 180px);
 		}
 	}
 }
+@media (min-width: 1350px) {
+	.contact {
+		&__number {
+			display: inline-block;
+			width: 50vw;
+			box-sizing: border-box;
+			padding-top: 14vh;
+			padding-bottom: 40px;
+			padding-left: calc(25vw - 300px);
+			padding-right: calc(25vw - 300px);
+		}
+		&__mail {
+			display: inline-block;
+			box-sizing: border-box;
+			padding-left: calc(25vw - 300px);
+			padding-right: calc(25vw - 300px);
+		}
+  	}
+ }
 //.contact {
 //	overflow: hidden;
 //	height: 100vh;

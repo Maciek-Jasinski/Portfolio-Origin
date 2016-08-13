@@ -20,8 +20,21 @@
 		&__informations {
 			@extend %informations;
 			padding-top: 80px;
-			height: 50%;
 			line-height: 220%;
+		}
+		&__button {
+			@extend %button;
+			width: 160px;
+			margin-top: 0;
+			position: relative;
+			color: $brand-white;
+			font-weight: 600;
+			letter-spacing: 1px;
+			z-index: 500;
+			&:hover {
+				color: $brand-dark-gray;
+				background-color: $brand-light-sand;
+			}
 		}
 	}
 	&__photo {
@@ -58,9 +71,11 @@
 				max-width: 385px;
 				padding-right: 90px;
 				padding-top: 10vh;
+				padding-bottom: 10px;
 			}
 		}
 		&__photo {
+			opacity: 1;
 			width: 50vw;
 			max-width: 2000px;
 			margin: 0;
@@ -70,8 +85,11 @@
 			background-color: $brand-light-sand;
 			&>img {
 				max-width: 500px;
-				width: 100%;
+				width: 90%;
 				margin-top: 70px;
+				position: absolute;
+				bottom: 0;
+				left: calc(25vw - 180px);
 			}
 		}
 	}
@@ -94,12 +112,26 @@
 		}
 		&__photo {
 			&>img {
-				margin-top: 40px;
+				//left: 25%;			
 			}
 		}
 	}
 }
-
+@media (min-width: 1400px) {
+	.about {
+		&__description {
+			&__button {
+				margin-top: 50px;
+			}
+		}
+		&__photo {
+			&>img {
+				max-width: 800px;
+				left: calc(25vw - 300px);
+			}
+		}
+	}
+}
 //@media (min-width: 1000px) {
 //	.about {
 //		overflow: hidden;

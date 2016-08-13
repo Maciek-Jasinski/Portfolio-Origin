@@ -96,7 +96,6 @@ $(document).ready(function(){
     var div = 0;
     var running = false;
 	var slide;
-	//var dir;
 	var handler = function (e) {
 		var dir = 'down'
 		if (running) {
@@ -145,14 +144,8 @@ $(document).ready(function(){
 		}
 
 		if (dir == 'down' && div < divs.length) {
-			//if (div == 3) {
-			//	div++;
-				
-			//	}
-			//else {
 				div++;
 				slide = div - 1;
-			//}
 			console.log(div);
 
 		}
@@ -162,22 +155,6 @@ $(document).ready(function(){
 			running = false;
 			return;
 		}
-		//if (div == 3) {
-		//	$('.navigation__button__item').css("background-color", "white");
-		//	$('.navigation__button__item:nth-child(2)').css("background-color", 'transparent');
-		//	//$('.navigation__button').on('click', function(){
-		//	//	if ($('.navigation__button').hasClass('active-nav')) {
-		//	//		$('.navigation__button').removeClass('active-nav');
-		//	//	}
-		//	//	else {
-		//	//		$('.navigation__button').addClass('active-nav');
-		//	//	}
-		//	//});
-		//}
-		//else {
-		//	$('.navigation__button__item').css("background-color", "#37b30e");
-		//}
-	//	$('.navigation__list__item__link[data-nrNav='+div+']').addClass('active-nav-link');
 		if (div == 3 && dir == 'up') {
 			div--;
 			slide = div + 2;
@@ -305,31 +282,15 @@ $(document).ready(function(){
 	var nrSection=0;
 	$(document.body).on('DOMMouseScroll mousewheel keydown swipeup swipedown', handler );
 	
+	$(window).resize(function(){     
+	   if (($('body').width() <= 900) && (!($('.navigation__button')).hasClass('active-nav'))) {
+	      $('.navigation__list').css({'right':'-100vw'})
+		}
+	   else if (($('body').width() > 900) && (!($('.navigation__button')).hasClass('active-nav'))){
+	      $('.navigation__list').css({'right':'-50vw'})   
+	   }
+      	
+	});
 
 
 });
-	//$(window).resize(function(){     
-	//   if ($('body').width() <= 900 ){
-	//   	$('.navigation__button').on('click', function(){
-	//		if ($('.navigation__button').hasClass('active-nav')) {
-	//			$('.navigation__button').removeClass('active-nav');
-	//			$('.navigation__list').animate({
-	//				'right':'-50vw'
-	//			});
-	//		}
-	//		else {
-	//			$('.navigation__button').addClass('active-nav');
-	//			$('.navigation__list').animate({
-	//				'right':'50vw'
-	//			}, 600);
-	//		}
-	//	});
-	//	$('.navigation__list__item').on('click', function(e){
-	//		$nrSection = $(this).index();
-	//		$('.navigation__button').removeClass('active-nav');
-	//		$('.navigation__list').animate({
-	//			'right':'50vw'
-	//		});
-	//	});
-    //  	}
-	//});

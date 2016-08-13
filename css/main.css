@@ -44,13 +44,6 @@ table {
 a {
   text-decoration: none; }
 
-@font-face {
-  font-family: 'SEGOEUIL';
-  src: url("../font/SEGOEUIL.eot");
-  src: local("SEGOEUIL"), url("../font/SEGOEUIL.woff") format("woff"), url("../font/SEGOEUIL.ttf") format("truetype"); }
-@font-face {
-  font-family: 'mmrtext';
-  src: url("../font/mmrtext.ttf") format("truetype"); }
 html {
   font-size: 62.5%; }
 
@@ -141,6 +134,9 @@ body {
   @media screen and (min-width: 550px) {
     .about__description__informations, .skills__description__informations, .project-1__description__informations, .project-2__description__informations, .project-3__description__informations, .project-4__description__informations, .contact__description {
       font-size: 1.4em; } }
+  @media screen and (min-width: 1440px) {
+    .about__description__informations, .skills__description__informations, .project-1__description__informations, .project-2__description__informations, .project-3__description__informations, .project-4__description__informations, .contact__description {
+      font-size: 1.5em; } }
 
 .about__description, .skills__description, .project-1__description, .project-2__description, .project-3__description, .project-4__description {
   width: 100vw;
@@ -348,7 +344,7 @@ body {
   font-weight: 400; }
   @media screen and (min-width: 750px) {
     .navigation__list {
-      font-size: 1.4em; } }
+      font-size: 2.2em; } }
   @media screen and (min-width: 900px) {
     .navigation__list {
       font-size: 2.5em; } }
@@ -441,8 +437,9 @@ body {
 @media (min-width: 900px) {
   .navigation__list {
     width: 50vw;
-    right: -50vw; } }
-.project-1__photo__button, .project-2__photo__button, .project-3__photo__button, .project-4__photo__button {
+    right: -50vw;
+    padding-top: calc(50vh - 250px); } }
+.about__description__button, .project-1__photo__button, .project-2__photo__button, .project-3__photo__button, .project-4__photo__button {
   width: 200px;
   height: 20px;
   margin: 20px auto;
@@ -458,7 +455,7 @@ body {
   -webkit-transition: 0.5s;
   transition: 0.5s; }
   @media screen and (min-width: 900px) {
-    .project-1__photo__button, .project-2__photo__button, .project-3__photo__button, .project-4__photo__button {
+    .about__description__button, .project-1__photo__button, .project-2__photo__button, .project-3__photo__button, .project-4__photo__button {
       font-size: 1.2em; } }
 
 /*
@@ -704,8 +701,18 @@ body {
     background-color: #363636; }
     .about__description__informations {
       padding-top: 80px;
-      height: 50%;
       line-height: 220%; }
+    .about__description__button {
+      width: 160px;
+      margin-top: 0;
+      position: relative;
+      color: #fff;
+      font-weight: 600;
+      letter-spacing: 1px;
+      z-index: 500; }
+      .about__description__button:hover {
+        color: #363636;
+        background-color: #FAEE99; }
   .about__photo {
     max-width: 415px;
     margin: 0 auto;
@@ -730,8 +737,10 @@ body {
     .about__description__informations {
       max-width: 385px;
       padding-right: 90px;
-      padding-top: 10vh; }
+      padding-top: 10vh;
+      padding-bottom: 10px; }
   .about__photo {
+    opacity: 1;
     width: 50vw;
     max-width: 2000px;
     margin: 0;
@@ -741,14 +750,20 @@ body {
     background-color: #FAEE99; }
     .about__photo > img {
       max-width: 500px;
-      width: 100%;
-      margin-top: 70px; } }
+      width: 90%;
+      margin-top: 70px;
+      position: absolute;
+      bottom: 0;
+      left: calc(25vw - 180px); } }
 @media (min-width: 1000px) {
   .about__description__informations {
     padding-right: 50px; } }
-@media (min-width: 1200px) {
+@media (min-width: 1400px) {
+  .about__description__button {
+    margin-top: 50px; }
   .about__photo > img {
-    margin-top: 40px; } }
+    max-width: 800px;
+    left: calc(25vw - 300px); } }
 .skills {
   overflow: hidden;
   height: 100vh;
@@ -773,34 +788,43 @@ body {
           display: block;
           max-width: 75%; }
         .skills__description__bars__item:nth-child(2) {
-          display: block;
-          width: 50%; }
+          display: none;
+          width: 70%; }
         .skills__description__bars__item:nth-child(3) {
-          display: block;
-          width: 40%; }
+          display: none;
+          width: 25%; }
         .skills__description__bars__item:nth-child(4) {
-          display: block;
-          width: 30%; }
+          display: none;
+          width: 40%; }
         .skills__description__bars__item:nth-child(5) {
-          display: block;
-          width: 50%; }
+          display: none;
+          width: 70%; }
         .skills__description__bars__item:nth-child(6) {
-          display: block;
+          display: none;
           width: 60%; }
         .skills__description__bars__item:nth-child(7) {
-          display: block;
-          width: 20%; }
+          display: none;
+          width: 30%; }
         .skills__description__bars__item:nth-child(8) {
-          display: block;
-          width: 40%; }
+          display: none;
+          width: 60%; }
         .skills__description__bars__item:nth-child(9) {
-          display: block;
-          width: 70%; }
-        .skills__description__bars__item__value {
+          display: none;
+          width: 50%; }
+        .skills__description__bars__item__description {
           padding-top: 2px;
           font-size: 0.8em;
-          text-align: right;
-          margin-right: -35px; }
+          color: #bf0000;
+          text-align: center; }
+          @media screen and (min-width: 900px) {
+            .skills__description__bars__item__description {
+              font-size: 1.1em; } }
+        .skills__description__bars__item__value {
+          margin-top: -10px;
+          margin-right: -35px;
+          font-size: 0.8em;
+          color: #fff;
+          text-align: right; }
           @media screen and (min-width: 900px) {
             .skills__description__bars__item__value {
               font-size: 1.1em; } }
@@ -868,6 +892,8 @@ body {
       left: 0; }
       .skills__description__bars__item {
         margin-top: 0; }
+        .skills__description__bars__item__value {
+          margin-top: -15px; }
   .skills__icons {
     width: 50vw;
     height: 100vh;
@@ -929,7 +955,7 @@ body {
   left: 0;
   display: none; }
   .project-1__description {
-    background-color: #37b30e; }
+    background-color: #FCEF62; }
   .project-1__photo {
     width: 100vw;
     max-width: 390px;
@@ -968,9 +994,9 @@ body {
     .project-2__photo > img {
       width: 81%; }
     .project-2__photo__button {
-      color: #bf0000; }
+      color: #37b30e; }
       .project-2__photo__button:hover {
-        background-color: #bf0000;
+        background-color: #37b30e;
         color: #fff; }
 
 .project-3 {
@@ -994,7 +1020,7 @@ body {
     .project-3__photo > img {
       width: 81%; }
     .project-3__photo__button {
-      color: #000; }
+      color: #37b30e; }
       .project-3__photo__button:hover {
         background-color: #37b30e;
         color: #fff; }
@@ -1020,7 +1046,7 @@ body {
     .project-4__photo > img {
       width: 81%; }
     .project-4__photo__button {
-      color: #000; }
+      color: #37b30e; }
       .project-4__photo__button:hover {
         background-color: #37b30e;
         color: #fff; }
@@ -1048,7 +1074,7 @@ body {
   .project-3__description,
   .project-4__description {
     width: 50vw;
-    padding-top: 100px;
+    padding-top: calc(30vh - 67px);
     float: left; }
     .project-1__description__informations,
     .project-2__description__informations,
@@ -1056,7 +1082,7 @@ body {
     .project-4__description__informations {
       max-width: 350px;
       padding-right: 90px;
-      padding-top: 85px;
+      padding-top: 15vh;
       line-height: 200%; }
   .project-1__photo,
   .project-2__photo,
@@ -1084,17 +1110,34 @@ body {
     .project-4__photo__button {
       margin-top: 20px; }
 
+  .project-1__description {
+    background-color: #37b30e; }
   .project-1__photo {
     background-color: #363636; }
 
   .project-2__photo {
     background-color: #9d9d8f; }
+    .project-2__photo__button {
+      color: #bf0000; }
+      .project-2__photo__button:hover {
+        background-color: #bf0000;
+        color: #fff; }
 
   .project-3__photo {
     background-color: #FAEE99; }
+    .project-3__photo__button {
+      color: #363636; }
+      .project-3__photo__button:hover {
+        background-color: #363636;
+        color: #fff; }
 
   .project-4__photo {
-    background-color: #bf0000; } }
+    background-color: #bf0000; }
+    .project-4__photo__button {
+      color: #9d9d8f; }
+      .project-4__photo__button:hover {
+        background-color: #9d9d8f;
+        color: #fff; } }
 @media (min-width: 1000px) {
   .project-1__description__informations,
   .project-2__description__informations,
@@ -1112,6 +1155,18 @@ body {
     .project-3__photo > img,
     .project-4__photo > img {
       width: 50%; } }
+@media (min-width: 1650px) {
+  .project-1__photo,
+  .project-2__photo,
+  .project-3__photo,
+  .project-4__photo {
+    padding-top: calc(50vh - 300px); } }
+@media (min-width: 1920px) {
+  .project-1__photo,
+  .project-2__photo,
+  .project-3__photo,
+  .project-4__photo {
+    padding-top: calc(50vh - 350px); } }
 .contact {
   overflow: hidden;
   height: 100vh;
@@ -1195,7 +1250,7 @@ body {
     padding-bottom: 30px; } }
 @media (min-width: 900px) {
   .contact__title {
-    margin-top: 15vh; }
+    margin-top: calc(30vh - 90px); }
   .contact__description {
     width: 50vw;
     height: 50vh;
@@ -1228,5 +1283,19 @@ body {
   .contact__description {
     max-width: 2000px;
     margin: 0 auto;
-    padding-right: 180px;
-    padding-left: 180px; } }
+    padding-right: calc(25vw - 180px);
+    padding-left: calc(25vw - 180px); } }
+@media (min-width: 1350px) {
+  .contact__number {
+    display: inline-block;
+    width: 50vw;
+    box-sizing: border-box;
+    padding-top: 14vh;
+    padding-bottom: 40px;
+    padding-left: calc(25vw - 300px);
+    padding-right: calc(25vw - 300px); }
+  .contact__mail {
+    display: inline-block;
+    box-sizing: border-box;
+    padding-left: calc(25vw - 300px);
+    padding-right: calc(25vw - 300px); } }

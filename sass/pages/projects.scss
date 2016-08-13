@@ -1,32 +1,3 @@
-//.projects-prelude {
-//	height: 100vh;
-//	width: 100%;
-//	background-color: $brand-green;
-//	text-align: center;
-//	position: absolute;
-//	top: 0;
-//	left: 0;
-//	display: none;
-//	&__title {
-//		padding: 20%;
-//		position: relative;
-//		color: $brand-white;
-//		@include font-size($h4-font-sizes);
-//		font-weight: 100;
-//		letter-spacing: -10px;
-//		text-transform: uppercase;
-//		&::before {
-//			@extend %header::before;
-//			height: 6px;
-//			top: 30%;
-//		}
-//		&::after {
-//			@extend %header::after;
-//			height: 6px;
-//			bottom: 30%;
-//		}
-//	}
-//}
 .projects-prelude {
 	height: 100vh;
 	width: 100vw;
@@ -68,8 +39,8 @@
 	left: 0;
 	display: none;
 		&__description {
-		@extend %description;
-		background-color: $brand-green;
+			@extend %description;
+			background-color: $brand-sand;
 		&__title {
 			@extend %header;
 			&::before {
@@ -88,7 +59,6 @@
 			max-width: 390px;
 			margin: 0 auto;
 			margin-top: -40vh;
-			//display: inline-block;
 			background-color: transparent;
 			text-align: center;
 			position: relative;
@@ -135,7 +105,6 @@
 			max-width: 390px;
 			margin: 0 auto;
 			margin-top: -40vh;
-			//display: inline-block;
 			background-color: transparent;
 			text-align: center;
 			position: relative;
@@ -145,9 +114,9 @@
 			}
 			&__button {
 				@extend %button;
-				color: $brand-red;
+				color: $brand-green;
 				&:hover {
-					background-color: $brand-red;
+					background-color: $brand-green;
 					color: $brand-white;
 				}
 			}
@@ -182,7 +151,6 @@
 			max-width: 390px;
 			margin: 0 auto;
 			margin-top: -40vh;
-			//display: inline-block;
 			background-color: transparent;
 			text-align: center;
 			position: relative;
@@ -192,7 +160,7 @@
 			}
 			&__button {
 				@extend %button;
-				color: $brand-black;
+				color: $brand-green;
 				&:hover {
 					background-color: $brand-green;
 					color: $brand-white;
@@ -229,7 +197,6 @@
 			max-width: 390px;
 			margin: 0 auto;
 			margin-top: -40vh;
-			//display: inline-block;
 			background-color: transparent;
 			text-align: center;
 			position: relative;
@@ -239,7 +206,7 @@
 			}
 			&__button {
 				@extend %button;
-				color: $brand-black;
+				color: $brand-green;
 				&:hover {
 					background-color: $brand-green;
 					color: $brand-white;
@@ -282,12 +249,12 @@
 	.project-4 {
 		&__description {
 			width: 50vw;
-			padding-top: 100px;
+			padding-top: calc(30vh - 67px);
 			float: left;
 			&__informations {
 				max-width: 350px;
 				padding-right: 90px;
-				padding-top: 85px;
+				padding-top: 15vh;
 				line-height: 200%;
 			}
 		}
@@ -312,6 +279,9 @@
 		}
 	}
 	.project-1 {
+		&__description {
+			background-color: $brand-green;
+		}
 		&__photo {
 			background-color: $brand-dark-gray;
 		}
@@ -319,16 +289,37 @@
 	.project-2 {
 		&__photo {
 			background-color: $brand-gray;
+			&__button {
+				color: $brand-red;
+				&:hover {
+					background-color: $brand-red;
+					color: $brand-white;
+				}
+			}
 		}
 	}
 	.project-3 {
 		&__photo {
 			background-color: $brand-light-sand;
+			&__button {
+				color: $brand-dark-gray;
+				&:hover {
+					background-color: $brand-dark-gray;
+					color: $brand-white;
+				}
+			}
 		}
 	}
 	.project-4 {
 		&__photo {
 			background-color: $brand-red;
+			&__button {
+				color: $brand-gray;
+				&:hover {
+					background-color: $brand-gray;
+					color: $brand-white;
+				}
+			}
 		}
 	}
 }
@@ -357,6 +348,27 @@
 		}
 	}
 }
+@media (min-width: 1650px) {
+	.project-1,
+	.project-2,
+	.project-3,
+	.project-4 {
+		&__photo {
+			padding-top: calc(50vh - 300px);
+		}
+	}
+}
+@media (min-width: 1920px) {
+	.project-1,
+	.project-2,
+	.project-3,
+	.project-4 {
+		&__photo {
+			padding-top: calc(50vh - 350px);
+		}
+	}
+}
+
 //.projects-prelude {
 //	height: 100vh;
 //	width: 100%;

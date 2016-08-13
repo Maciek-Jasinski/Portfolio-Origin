@@ -1,13 +1,3 @@
-
-@font-face {
-  font-family: 'SEGOEUIL';
-  src: url('../font/SEGOEUIL.eot');
-  src: local('SEGOEUIL'), url('../font/SEGOEUIL.woff') format('woff'), url('../font/SEGOEUIL.ttf') format('truetype');
-}
-@font-face {
-  font-family: 'mmrtext';
-  src: url('../font/mmrtext.ttf') format('truetype');
-}
 $base-font: 'Forum', cursive;
 $logo-font: 'Source Sans Pro', sans-serif;
 $home-font: 'Source Sans Pro', sans-serif;
@@ -15,6 +5,7 @@ $breakpoints: (
   'small': 550px,
   'medium': 750px,
   'large': 900px,
+  'extra-large': 1440px,
 );
 $h1-font-sizes: (
   'null'  : 2.7em,
@@ -57,13 +48,13 @@ $value-font-sizes: (
 );
 $menu-font-sizes: (
   'null'  : 2em,
-  'medium': 1.4em,
+  'medium': 2.2em,
   'large' : 2.5em,
 );
 $description-font-sizes: (
   'null' : 1em,
   'small': 1.4em,
- // 'medium' : 1.5em,
+  'extra-large': 1.5em,
 );
 $button-font-sizes: (
   'large' : 1.2em,
