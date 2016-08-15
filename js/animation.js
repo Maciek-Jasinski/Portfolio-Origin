@@ -162,8 +162,8 @@ $(document).ready(function(){
 		if (e.type == 'click') {
 			divs.fadeOut(100);
 		}
-		divs.eq(slide).fadeOut(200, function(){
-			divs.eq(div).fadeIn(200, function() {
+		divs.eq(slide).fadeOut(350)//, function(){
+			divs.eq(div).fadeIn(450, function() {
 
 				if (div == 3 && dir == 'down'){
 					div++;
@@ -171,32 +171,37 @@ $(document).ready(function(){
 
 					(function(){
 						running = true;
-						divs.eq(slide).delay(2000).fadeOut(200, function(){
-							divs.eq(div).fadeIn(200, function() {
-								console.log('dzialam');
-								running = false;
-								$('.container').fadeIn(0);
-							});
-						});
-						$('.container').delay(2000).fadeIn(0, function(){
-							$('.container').addClass('active');
-							setTimeout(function(){
-								$('.container').removeClass('active').fadeOut(0);		
-						},200);
-						});
+						setTimeout(function(){
+							divs.eq(slide).fadeOut(350);
+							divs.eq(div).fadeIn(450);
+							$('.container').fadeIn(200);
+							running = false;
+						}, 2000);
+						//divs.eq(slide).delay(2000).fadeOut(200, function(){
+						//	divs.eq(div).fadeIn(200, function() {
+						//		running = false;
+						//		//$('.container').fadeIn(0);
+						//	});
+						//});
+						//$('.container').delay(2000).fadeIn(0, function(){
+						//	//$('.container').addClass('active');
+						//	setTimeout(function(){
+						//		//$('.container').fadeOut(0);		
+						//},200);
+						//});
 					})();
 				}
 			else {
 					running = false;
 				}
 			});
-		});
-		if (div == 1 || div == 4) {
-			$('.container').fadeIn(100);
+		//});
+		if (div == 0 || div == 3) {
+			$('.container').fadeOut(200);
 		}
-		$('.container').addClass('active');
+		//$('.container').addClass('active');
 		setTimeout(function(){
-			$('.container').removeClass('active').fadeOut(0);
+			//$('.container').fadeOut(0);
 				if (div != 0 && div != 3) {
 					$('.container').fadeIn(200);
 				}

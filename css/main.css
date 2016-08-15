@@ -170,8 +170,8 @@ body {
 
 .active {
   color: white;
-  -webkit-transform: scale(8);
-          transform: scale(8);
+  -webkit-transform: scale(0.5);
+          transform: scale(0.5);
   -webkit-transition: 0.2s;
   transition: 0.2s; }
 
@@ -729,6 +729,12 @@ body {
 @media (min-width: 550px) {
   .about__description__informations {
     max-width: 500px; } }
+@media (min-width: 550px) and (max-width: 900px) and (orientation: landscape) {
+  .about__description {
+    padding-top: 50px;
+    font-size: 3em; }
+    .about__description__informations {
+      font-size: 1em; } }
 @media (min-width: 900px) {
   .about__description {
     width: 50vw;
@@ -877,6 +883,14 @@ body {
       padding: 12px 10px; }
       .skills__icons__list__item__img {
         width: 65px; } }
+@media (min-width: 550px) and (max-width: 900px) and (orientation: landscape) {
+  .skill__description {
+    padding-top: 50px;
+    font-size: 3em; }
+    .skill__description__informations {
+      font-size: 1em; }
+  .skill__icons__list__item__img {
+    width: 50px; } }
 @media (min-width: 900px) {
   .skills__description {
     width: 50vw;

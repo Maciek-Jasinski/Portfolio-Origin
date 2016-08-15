@@ -150,6 +150,26 @@
 		}
 	}
 }
+@media (min-width: 550px) and (max-width: 900px) and (orientation: landscape) {
+	.skill {
+		&__description {
+			padding-top: 50px;
+			font-size: 3em;
+			&__informations {
+				font-size: 1em;
+			}
+		}
+		&__icons {
+			&__list {
+				&__item {
+					&__img {
+						width: 50px;
+					}
+				}
+			}
+		}
+	}
+}
 @media (min-width: 900px) {
 	.skills {	
 		&__description {
@@ -214,100 +234,3 @@
 		}
 	}
 }
-
-
-//.skills {
-//	overflow: hidden;
-//	height: 100vh;
-//	position: absolute;
-//	top: 0;
-//	left: 0;
-//	display: none;
-//	&__description {
-//		@extend %description;
-//		background-color: $brand-red;
-//		&__title {
-//			@extend %header;
-//			&::before {
-//				@extend %header::before;
-//			}
-//			&::after {
-//				@extend %header::after;
-//			}
-//		}
-//		&__informations {
-//			@extend %informations;
-//			padding-bottom: 50px;
-//		}
-//		&__bars {
-//			height: 20px;
-//			width: 100%;				
-//			&__item {
-//				height: 100%;
-//				margin-top: 20px;
-//				background-color: $brand-white;
-//				display: none;
-//				
-//					&:nth-child(1) {
-//						display: block;
-//						width: 75%;
-//					}
-//				&__value {
-//					padding-top: 2px;
-//					@include font-size($value-font-sizes);
-//					text-align: right;
-//					margin-right: -35px;
-//					&:nth-child(1) {
-//						display: block;
-//					}
-//				}
-//				}
-//		}
-//	}
-//	&__icons {
-//		@extend %photo;
-//		padding-left: 8%;
-//		background-color: $brand-gray;
-//		&__list {
-//			overflow: hidden;
-//			width: 100%;
-//			height: 100%;
-//			&__item {
-//				width: 33.33%;
-//				height: 33.33%;
-//				box-sizing: border-box;
-//				padding: 25px;
-//				float: left;
-//				&__img {
-//					width: 100%;
-//					filter: grayscale(100%);
-//					transition: 0.5s;
-//				}
-//				&:hover .skills__icons__list__item__img {
-//					cursor: pointer;
-//					filter: grayscale(0%);
-//				}
-//				&:nth-child(1),
-//				&:nth-child(2),
-//				&:nth-child(3) {
-//					animation: 2s bg backwards;
-//				}
-//				&:nth-child(4),
-//				&:nth-child(5),
-//				&:nth-child(6) {
-//					animation: 2s bg 0.4s backwards;
-//				}
-//				&:nth-child(7),
-//				&:nth-child(8),
-//				&:nth-child(9) {
-//					animation: 2s bg 0.8s backwards;
-//				}
-//			}
-//		}
-//	}
-//}
-//.icon-hover {
-//	.skills__icons__list__item__img {
-//		filter: grayscale(0%);
-//	}
-//}
