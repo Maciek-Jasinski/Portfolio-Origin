@@ -118,10 +118,34 @@
 @media (min-width: 1200px) {
 	.contact {
 		&__description {
-			max-width: 2000px;
+			max-width: 500px;
+			margin: 0 auto;
+			//padding-top: 10vh;
+			padding-right: 180px;
+			padding-left: 180px;
+		}
+	}
+}
+@media (min-width: 1350px) {
+	.contact {
+		&__description {
+			max-width: 500px;
 			margin: 0 auto;
 			padding-right: calc(25vw - 180px);
 			padding-left: calc(25vw - 180px);
+		}
+		&__number {
+			display: inline-block;
+			width: 50vw;
+			box-sizing: border-box;
+			padding-top: 14vh;
+			padding-bottom: 40px;
+			padding-left: calc(50% - 660px);
+		}
+		&__mail {
+			display: inline-block;
+			box-sizing: border-box;
+			padding-left: calc(50% - 650px);
 		}
 	}
 }

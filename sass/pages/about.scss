@@ -96,7 +96,14 @@
 			background-color: $brand-light-sand;
 			&>img {
 				max-width: 500px;
+<<<<<<< HEAD
 				width: 90%;
+=======
+				width: 100%;
+				position: absolute;
+				bottom: 0;
+				left: calc(25% - 100px);
+>>>>>>> f6d42aacd27485797f78048e09e8b4b9e0866aac
 				margin-top: 70px;
 				position: absolute;
 				bottom: 0;
@@ -123,7 +130,11 @@
 		}
 		&__photo {
 			&>img {
+<<<<<<< HEAD
 				//left: 25%;			
+=======
+				left: 25%;
+>>>>>>> f6d42aacd27485797f78048e09e8b4b9e0866aac
 			}
 		}
 	}
