@@ -7,10 +7,10 @@
 		right: -100vw;
 		box-sizing: border-box;
 		padding: 10%;
-		padding-top: 70px;
+		padding-top: 20vh;
 		z-index: 50;
-		background-color: $brand-light-sand;
-		color: $brand-dark-gray;
+		background-color: $brand-ala-white;
+		color: $brand-dark-blue;
 		@include font-size($menu-font-sizes);
 		font-weight: 400;
 		&__item {
@@ -34,7 +34,7 @@
 				&:hover {
 					cursor: pointer;
 					&::before {
-						background-color: $brand-green;
+						background-color: $brand-light-red;
 						transition: 0.3s;
 					}					
 				}
@@ -42,10 +42,10 @@
 		}	
 	}
 	&__button {
-		padding: 40px;
+		//padding: 40px;
 		position: fixed;
-		right: 0;
-		top: 0;
+		right: 7vw;
+		top: 5vh;
 		z-index: 120;
 		transition: 0.3s;
 		&__item {
@@ -53,7 +53,7 @@
 			height: 3px;
 			margin-bottom: 5px;
 			z-index: 100;
-			background-color: $brand-green;
+			background-color: $brand-light-red;
 			transition: 0.3s;
 		}
 		&:hover {
@@ -91,9 +91,13 @@
 		transform: translateY(-10px) rotate(45deg);
 	}
 }
+.white-button {
+	.navigation__button__item {
+		background-color: white;
+	}
+}
 .active-nav-link .navigation__list__item__link{
-	 
-		color: $brand-red;
+		color: $brand-light-red;
 		&::before {
 			content: "";
 			width: 20px;
@@ -107,6 +111,28 @@
 		}
 	
 }
+@media (min-width: 550px) and (max-width: 750px) and (orientation: landscape) {
+	.navigation {
+		&__list {
+			padding-top: 10vh;
+			font-size: 1.8em;
+			&__item {
+				padding: 15px;
+			}
+		}
+	}
+} 
+@media (min-width: 750px) and (max-width: 900px) and (orientation: landscape) {
+	.navigation {
+		&__list {
+			padding-top: 20vh;
+			font-size: 2em;
+			&__item {
+				padding: 20px 15px;
+			}
+		}
+	}
+} 
 @media (min-width: 900px ){
 	.navigation{
 		&__list {

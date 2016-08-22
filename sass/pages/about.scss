@@ -7,40 +7,28 @@
 	display: none;
 	&__description {
 		@extend %description;
-		background-color: $brand-dark-gray;
-		&__title {
-			@extend %header;
-			&::before {
-				@extend %header::before;
-			}
-			&::after {
-				@extend %header::after;
+		background-color: $brand-dark-blue;
+		&__container {
+			&__title {
+			position: relative;
+				@extend %header;			
+				&::before {
+					@extend %header::before;
+				}
+				&::after {
+					@extend %header::after;
+				}
 			}
 		}
 		&__informations {
 			@extend %informations;
-			padding-top: 80px;
+			padding-top: 15vh;
 			line-height: 220%;
-		}
-		&__button {
-			@extend %button;
-			width: 160px;
-			margin-top: 0;
-			position: relative;
-			color: $brand-white;
-			font-weight: 600;
-			letter-spacing: 1px;
-			z-index: 500;
-			&:hover {
-				color: $brand-dark-gray;
-				background-color: $brand-light-sand;
-			}
 		}
 	}
 	&__photo {
 		max-width: 415px;
 		margin: 0 auto;
-		margin-top: -60vh;
 		position: relative;
 		z-index: 20;
 		opacity: 0.4;
@@ -49,6 +37,9 @@
 		&>img {
 			animation: 2s slide-up backwards;
 			width: 100%;
+			position: absolute;
+			top: -50vh;
+			left: 10%;
 		}
 	}
 }
@@ -64,8 +55,7 @@
 @media (min-width: 550px) and (max-width: 900px) and (orientation: landscape) {
 	.about {
 		&__description {
-			padding-top: 50px;
-			font-size: 3em;
+			font-size: 0.8em;
 			&__informations {
 				font-size: 1em;
 			}
@@ -78,11 +68,21 @@
 			width: 50vw;
 			padding-top: calc(30vh - 67px);
 			float: left;
+			&__container__title {
+				&::before {
+					width: calc(23vw - 50%);
+					left: calc(-25vw + 50%);
+				}
+				&::after {
+					width: calc(23vw - 50%);
+					right: calc(-25vw + 50%);
+				}
+			}
 			&__informations {
 				max-width: 385px;
-				padding-right: 90px;
 				padding-top: 10vh;
 				padding-bottom: 10px;
+				line-height: 190%;
 			}
 		}
 		&__photo {
@@ -93,17 +93,14 @@
 			padding-left: 60px;
 			padding-right: 20px;
 			display: inline-block;
-			background-color: $brand-light-sand;
+			background-color: $brand-ala-white;
 			&>img {
 				max-width: 500px;
-<<<<<<< HEAD
-				width: 90%;
-=======
 				width: 100%;
 				position: absolute;
+				top: auto;
 				bottom: 0;
 				left: calc(25% - 100px);
->>>>>>> f6d42aacd27485797f78048e09e8b4b9e0866aac
 				margin-top: 70px;
 				position: absolute;
 				bottom: 0;
@@ -130,11 +127,7 @@
 		}
 		&__photo {
 			&>img {
-<<<<<<< HEAD
-				//left: 25%;			
-=======
 				left: 25%;
->>>>>>> f6d42aacd27485797f78048e09e8b4b9e0866aac
 			}
 		}
 	}

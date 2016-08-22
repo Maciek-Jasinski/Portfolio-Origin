@@ -169,7 +169,7 @@ body {
 
 .navigation {
   width: 260px;
-  height: 100vw;
+  height: 100vh;
   box-sizing: border-box;
   padding: 50px 30px;
   position: fixed;
@@ -178,8 +178,8 @@ body {
   z-index: 100;
   background-color: #fff;
   color: #878c93;
-  transition: 5s;
-  transform: translateX(290px); }
+  transition: 1.4s;
+  transform: translateX(260px); }
   .navigation__list {
     margin: 20px 0; }
     .navigation__list__item {
@@ -266,7 +266,7 @@ body {
       transition: 0.3s; }
 
 .site-header--fixed .nav-icon {
-  padding-top: 10px; }
+  padding-top: 0; }
 
 .site-header--fixed .nav-icon__title {
   color: #000; }
@@ -378,8 +378,8 @@ body {
 .home {
   overflow: hidden;
   margin-top: -100px;
-  padding-top: 270px;
   padding: 0 30px;
+  padding-top: 270px;
   position: relative;
   background: url(../images/bg_2.jpg) left no-repeat;
   background-size: cover; }
@@ -911,7 +911,13 @@ body {
         text-decoration: underline;
         transition: 0.5s; }
 
+@media (min-width: 360px) {
+  .nav-icon {
+    padding-right: 30px; } }
 @media (min-width: 550px) {
+  .nav-icon {
+    padding-right: 35px; }
+
   .clients__list__item {
     width: calc(50% - 75px);
     margin: 0 35px;

@@ -98,32 +98,38 @@ body {
   to {
     transform: scale(1, 1);
     opacity: 1; } }
-.navigation__list {
-  animation: 1s slide-down backwards;
-  display: none;
-  width: 100%;
-  padding-top: 25px;
-  padding-right: 15px;
-  box-sizing: border-box;
-  text-align: center; }
-  .navigation__list__item {
-    display: block;
-    padding: 15px;
-    padding-top: 10px;
-    transition: 0.5s;
-    border-top: 2px solid transparent; }
-    .navigation__list__item__link {
-      color: #333b46; }
-.navigation__hamburger {
-  animation: 1s slide-down backwards;
-  float: right;
-  padding-right: 15px;
-  padding-top: 20px; }
-  .navigation__hamburger__item {
-    background-color: #e84c3d;
-    width: 25px;
-    height: 3px;
-    margin: 5px 0; }
+.navigation {
+  background-color: #f0f0f0; }
+  .navigation__list {
+    overflow: hidden;
+    animation: 1s slide-down backwards;
+    display: none;
+    width: 100%;
+    padding-right: 15px;
+    box-sizing: border-box;
+    text-align: center; }
+    .navigation__list__item {
+      width: 100%;
+      display: block;
+      padding: 15px;
+      padding-top: 10px;
+      transition: 0.5s;
+      border-top: 2px solid transparent; }
+      .navigation__list__item:nth-child(1) {
+        padding-top: 0; }
+      .navigation__list__item__link {
+        color: #333b46; }
+  .navigation__hamburger {
+    animation: 1s slide-down backwards;
+    float: right;
+    margin: 20px 15px;
+    margin-left: 0;
+    margin-bottom: 21px; }
+    .navigation__hamburger__item {
+      background-color: #e84c3d;
+      width: 25px;
+      height: 3px;
+      margin: 5px 0; }
 
 .site-header--fixed .navigation__hamburger__item {
   background-color: #fff;
@@ -137,6 +143,7 @@ body {
 
 @media (min-width: 750px) {
   .navigation__hamburger {
+    margin: 0;
     padding-top: 35px;
     padding-right: 35px; } }
 @media (min-width: 1000px) {
@@ -144,11 +151,13 @@ body {
     overflow: hidden;
     float: right;
     padding: 0;
-    padding-top: 10px; }
+    padding-top: 10px;
+    background-color: transparent; }
     .navigation__list {
       padding: 10px;
       display: inline-block; }
       .navigation__list__item {
+        width: auto;
         float: left;
         margin: 20px 0;
         padding: 0 20px; }
@@ -156,10 +165,11 @@ body {
       display: none; } }
 .logo {
   animation: 1s slide-down backwards;
+  width: 70vw;
   font-family: "Leckerli One", cursive;
   padding: 20px;
   float: left;
-  text-align: center; }
+  text-align: left; }
   .logo__title {
     color: #e84c3d; }
     .logo__title > h3 {
@@ -179,6 +189,7 @@ body {
     padding-left: 30px; } }
 @media (min-width: 1000px) {
   .logo {
+    width: auto;
     padding: 0;
     padding-top: 20px; } }
 .about__text__button, .ideas__button, .contact__form__send {
@@ -297,184 +308,191 @@ body {
     padding-left: calc(50% - 580px);
     padding-right: calc(50% - 580px); } }
 .home {
-  background-color: #e1e1e1;
-  padding-top: 170px;
-  text-align: center;
-  text-transform: uppercase;
-  position: relative; }
-  .home__title {
-    animation: 1s zoom-in backwards;
-    font-size: 2.5em;
-    font-family: "Roboto Condensed", sans-serif;
-    color: #333b46;
-    padding-bottom: 10px; }
-    @media screen and (min-width: 750px) {
-      .home__title {
-        font-size: 2.8em; } }
-    @media screen and (min-width: 1000px) {
-      .home__title {
-        font-size: 3em; } }
-  .home__description {
-    animation: 1s zoom-in backwards;
-    font-size: 1.5em;
-    color: #81868e; }
-    @media screen and (min-width: 550px) {
-      .home__description {
-        font-size: 1.6em; } }
-    @media screen and (min-width: 750px) {
-      .home__description {
-        font-size: 1.6em; } }
-  .home__thing1, .home__thing2, .home__thing3, .home__thing3, .home__thing5, .home__thing6 {
-    display: none; }
-  .home__thing4 {
-    animation: 2s bg 0.3s backwards;
-    position: absolute;
-    bottom: 210px;
-    left: 10px;
-    width: 180px; }
-    .home__thing4 > img {
-      width: 100%; }
-  .home__thing7 {
-    animation: 2s bg 0.4s backwards;
-    position: absolute;
-    bottom: 40px;
-    right: 0;
-    width: 160px; }
-    .home__thing7 > img {
-      width: 100%; }
-  .home__scroll {
-    padding-top: 300px;
-    padding-bottom: 15px; }
-    .home__scroll__description {
-      color: #e84c3d;
-      font-size: 0.9em; }
-      @media screen and (min-width: 550px) {
-        .home__scroll__description {
-          font-size: 1.1em; } }
+  background-color: #e1e1e1; }
+  .home__container {
+    width: 100%;
+    height: 100%;
+    padding-top: 170px;
+    text-align: center;
+    text-transform: uppercase;
+    position: relative; }
+    .home__container__title {
+      animation: 1s zoom-in backwards;
+      font-size: 2.5em;
+      font-family: "Roboto Condensed", sans-serif;
+      color: #333b46;
+      padding-bottom: 10px; }
       @media screen and (min-width: 750px) {
-        .home__scroll__description {
-          font-size: 0.9em; } }
+        .home__container__title {
+          font-size: 2.8em; } }
+      @media screen and (min-width: 1000px) {
+        .home__container__title {
+          font-size: 3em; } }
+    .home__container__description {
+      animation: 1s zoom-in backwards;
+      font-size: 1.5em;
+      color: #81868e; }
+      @media screen and (min-width: 550px) {
+        .home__container__description {
+          font-size: 1.6em; } }
+      @media screen and (min-width: 750px) {
+        .home__container__description {
+          font-size: 1.6em; } }
+    .home__container__thing1, .home__container__thing2, .home__container__thing3, .home__container__thing3, .home__container__thing5, .home__container__thing6 {
+      display: none; }
+    .home__container__thing4 {
+      animation: 2s bg 0.3s backwards;
+      position: absolute;
+      bottom: 210px;
+      left: 10px;
+      width: 180px; }
+      .home__container__thing4 > img {
+        width: 100%; }
+    .home__container__thing7 {
+      animation: 2s bg 0.4s backwards;
+      position: absolute;
+      bottom: 40px;
+      right: 0;
+      width: 160px; }
+      .home__container__thing7 > img {
+        width: 100%; }
+    .home__container__scroll {
+      padding-top: 300px;
+      padding-bottom: 15px; }
+      .home__container__scroll__description {
+        color: #e84c3d;
+        font-size: 0.9em; }
+        @media screen and (min-width: 550px) {
+          .home__container__scroll__description {
+            font-size: 1.1em; } }
+        @media screen and (min-width: 750px) {
+          .home__container__scroll__description {
+            font-size: 0.9em; } }
 
 @media (min-width: 550px) {
-  .home__title {
+  .home__container__title {
     padding-top: 40px; }
-  .home__thing4 {
+  .home__container__thing4 {
     bottom: 260px;
     left: 100px;
     width: 160px; }
-  .home__thing5 {
+  .home__container__thing5 {
     animation: 2s bg 0.5s backwards;
     display: block;
     position: absolute;
     bottom: 120px;
     left: 50px;
     width: 150px; }
-    .home__thing5 > img {
+    .home__container__thing5 > img {
       width: 100%; }
-  .home__thing6 {
+  .home__container__thing6 {
     animation: 2s bg 0.6s backwards;
     display: block;
     position: absolute;
     bottom: 70px;
     left: 40px;
     width: 150px; }
-    .home__thing6 > img {
+    .home__container__thing6 > img {
       width: 100%; }
-  .home__thing7 {
+  .home__container__thing7 {
     bottom: 100px;
     right: 40px; }
-  .home__scroll {
+  .home__container__scroll {
     padding-top: 350px; } }
 @media (min-width: 750px) {
-  .home__title {
+  .home__container__title {
     padding-top: 90px; }
-  .home__thing3 {
+  .home__container__thing3 {
     animation: 2s bg 0.7s backwards;
     display: block;
     position: absolute;
     bottom: 80px;
     right: 200px;
     width: 70px; }
-    .home__thing3 > img {
+    .home__container__thing3 > img {
       width: 100%; }
-  .home__thing4 {
+  .home__container__thing4 {
     bottom: 290px;
     left: 150px; }
-  .home__thing5 {
+  .home__container__thing5 {
     bottom: 150px;
     left: 90px; }
-  .home__thing6 {
+  .home__container__thing6 {
     bottom: 110px;
     left: 80px; }
-  .home__thing7 {
+  .home__container__thing7 {
     bottom: 130px;
     right: 50px; }
-  .home__scroll {
+  .home__container__scroll {
     padding-top: 350px; } }
 @media (min-width: 1000px) {
-  .home__title {
+  .home__container__title {
     padding-top: 140px; }
-  .home__thing1 {
+  .home__container__thing1 {
     animation: 2s bg 0.8s backwards;
     display: block;
     position: absolute;
     top: 180px;
     left: -100px;
     width: 300px; }
-    .home__thing1 > img {
+    .home__container__thing1 > img {
       width: 100%; }
-  .home__thing2 {
+  .home__container__thing2 {
     animation: 2s bg 0.9s backwards;
     display: block;
     position: absolute;
     top: 250px;
     right: 40px;
     width: 160px; }
-    .home__thing2 > img {
+    .home__container__thing2 > img {
       width: 100%; }
-  .home__thing3 {
+  .home__container__thing3 {
     bottom: 50px;
     right: 300px; }
-  .home__thing4 {
+  .home__container__thing4 {
     bottom: 250px;
     left: 210px; }
-  .home__thing5 {
+  .home__container__thing5 {
     bottom: 140px;
     left: 120px; }
-  .home__thing6 {
+  .home__container__thing6 {
     bottom: 100px;
     left: 110px; }
-  .home__thing7 {
+  .home__container__thing7 {
     bottom: 80px;
     right: 110px; }
-  .home__scroll {
+  .home__container__scroll {
     padding-top: 300px; } }
 @media (min-width: 1200px) {
-  .home__title {
+  .home__container__title {
     padding-top: 140px; }
-  .home__thing1 {
+  .home__container__thing1 {
     top: 180px;
     left: -100px; }
-  .home__thing2 {
+  .home__container__thing2 {
     top: 230px;
     right: 40px; }
-  .home__thing3 {
+  .home__container__thing3 {
     bottom: 50px;
     right: 350px; }
-  .home__thing4 {
+  .home__container__thing4 {
     bottom: 140px;
     left: 300px; }
-  .home__thing5 {
+  .home__container__thing5 {
     bottom: 70px;
     left: 120px; }
-  .home__thing6 {
+  .home__container__thing6 {
     bottom: 30px;
     left: 110px; }
-  .home__thing7 {
+  .home__container__thing7 {
     bottom: 40px;
     right: 120px; }
-  .home__scroll {
+  .home__container__scroll {
     padding-top: 200px; } }
+@media (min-width: 1400px) {
+  .home {
+    padding-left: calc(50% - 670px);
+    padding-right: calc(50% - 670px); } }
 .about {
   background-color: #f0f0f0;
   padding: 50px 20px; }

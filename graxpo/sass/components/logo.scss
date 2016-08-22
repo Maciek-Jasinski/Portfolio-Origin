@@ -1,9 +1,10 @@
 .logo {
 	animation: 1s slide-down backwards;
+	width: 70vw;
 	font-family: $logo-font;
 	padding: 20px;
 	float: left;
-	text-align: center;
+	text-align: left;
 	&__title {
 		color: $brand-main;
 		&>h3{
@@ -28,6 +29,7 @@
 }
 @media (min-width: 1000px) {
 	.logo{
+		width: auto;
 		padding: 0;
 		padding-top: 20px;
 	}

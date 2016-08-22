@@ -1,28 +1,29 @@
 %header {
 	animation: 2s bg backwards;
-	position: relative;
+	width: auto;
+	display: inline-block;
 	@include font-size($h3-font-sizes);
 	font-weight: 200;
-	letter-spacing: -6px; 
+	letter-spacing: -2px; 
 	text-transform: uppercase;
 }
 %header::before {
 	animation: 1s slide-right1 backwards;
 	content: "";
-	width: 30%;
+	width: calc(45vw - 50%);
 	height: 2px;
 	position: absolute;
 	top: 0;
-	left: 0;
+	left: calc(-50vw + 50%);
 	background-color: $brand-white;
 }
 %header::after {
 	animation: 1s slide-left1 backwards;
 	content: "";
-	width: 30%;
+	width: calc(45vw - 50%);
 	height: 2px;
 	position: absolute;
 	bottom: 0;
-	right: 0;
+	right: calc(-50vw + 50%);
 	background-color: $brand-white;	
 }

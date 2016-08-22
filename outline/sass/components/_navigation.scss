@@ -1,6 +1,6 @@
 .navigation{
 	width: 260px;
-	height: 100vw;
+	height: 100vh;
 	box-sizing: border-box;
 	padding: 50px 30px;
 	position: fixed;
@@ -9,7 +9,7 @@
 	z-index: 100;
 	background-color: $brand-white;
 	color: $brand-nav;
-	transition: 5s;
+	transition: 1.4s;
 	&__list{
 		margin: 20px 0;
 		&__item{
@@ -106,7 +106,7 @@
 }
 
 .site-header--fixed .nav-icon{
-	padding-top: 10px;
+	padding-top: 0;
 }
 
 .site-header--fixed .nav-icon__title{

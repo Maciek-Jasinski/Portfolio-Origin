@@ -15,7 +15,7 @@
 	width: 100vw;
 	height: 100%;
 	box-sizing: border-box;
-	padding-top: 120px;
+	padding-top: 20vh;
 	color: $brand-white;
 	text-align: center;
 	position: relative;
@@ -26,4 +26,13 @@
 	padding: 0 40px;
 	padding-top: 30px;
 	text-align: center;
+}
+%photo-section {
+	width: 100vw;
+	max-width: 390px;
+	margin: 0 auto;
+	background-color: transparent;
+	text-align: center;
+	position: relative;
+	z-index: 20;
 }

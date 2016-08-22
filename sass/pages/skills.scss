@@ -7,14 +7,17 @@
 	display: none;
 	&__description {
 		@extend %description;
-		background-color: $brand-red;
-		&__title {
-			@extend %header;
-			&::before {
-				@extend %header::before;
-			}
-			&::after {
-				@extend %header::after;
+		background-color: $brand-blue;
+		&__container {
+			&__title {
+			position: relative;
+				@extend %header;			
+				&::before {
+					@extend %header::before;
+				}
+				&::after {
+					@extend %header::after;
+				}
 			}
 		}
 		&__informations {
@@ -23,67 +26,19 @@
 			@extend %informations;
 			padding-bottom: 50px;
 		}
-		&__bars {
-			height: 20px;
-			width: 100%;				
-			&__item {
-				height: 100%;
-				margin-top: 60vh;
-				background-color: $brand-white;
-				display: none;
-					&:nth-child(1) {
-						display: block;
-						max-width: 75%;
-					}
-					&:nth-child(2) {
-						display: none;
-						width: 70%;
-					}
-					&:nth-child(3) {
-						display: none;
-						width: 25%;
-					}
-					&:nth-child(4) {
-						display: none;
-						width: 40%;
-					}
-					&:nth-child(5) {
-						display: none;
-						width: 70%;
-					}
-					&:nth-child(6) {
-						display: none;
-						width: 60%;
-					}
-					&:nth-child(7) {
-						display: none;
-						width: 30%;
-					}
-					&:nth-child(8) {
-						display: none;
-						width: 60%;
-					}
-					&:nth-child(9) {
-						display: none;
-						width: 50%;
-					}
-				&__description {
-					padding-top: 2px;
-					@include font-size($value-font-sizes);
-					color: $brand-red;
-					text-align: center;
-				}
-				&__value {
-					margin-top: -10px;
-					margin-right: -35px;
-					@include font-size($value-font-sizes);
-					color: $brand-white;
-					text-align: right;
-					&:nth-child(1) {
-						display: block;
-					}
-				}
-				}
+		&__button {
+			@extend %button;
+			width: 160px;
+			margin-top: 60vh;
+			position: relative;
+			border-color: $brand-light-red;
+			color: $brand-light-red;
+			letter-spacing: 1px;
+			z-index: 40;
+			&:hover {
+				color: $brand-white;
+				background-color: $brand-light-red;
+			}
 		}
 	}
 	&__icons {
@@ -99,7 +54,7 @@
 				width: 33.33%;
 				height: 33.33%;
 				box-sizing: border-box;
-				padding: 25px;
+				padding: 5vh;
 				float: left;
 				text-align: center;
 				&__img {
@@ -130,20 +85,15 @@
 		}
 	}
 }
-.icon-hover {
-	.skills__icons__list__item__img {
-		filter: grayscale(0%);
-	}
-}
 @media (min-width: 550px) {
 	.skills {
 		&__icons {
 			&__list {
 				padding-top: 50px;
 				&__item {
-					padding: 12px 10px;
+					//padding: 12px 10px;
 					&__img {
-						width: 65px;
+						width: 75px;
 					}
 				}
 			}
@@ -151,19 +101,23 @@
 	}
 }
 @media (min-width: 550px) and (max-width: 900px) and (orientation: landscape) {
-	.skill {
+	.skills {
 		&__description {
-			padding-top: 50px;
-			font-size: 3em;
-			&__informations {
-				font-size: 1em;
+			font-size: 0.8em;
+			&__button {
+				margin-top: 50vh;
 			}
 		}
 		&__icons {
 			&__list {
+				padding-top: 30px;
+				text-align: center;
 				&__item {
+					display: inline-block;
+					width: 20%;
+					height: 20%;
 					&__img {
-						width: 50px;
+						width: 40px;
 					}
 				}
 			}
@@ -176,21 +130,22 @@
 			width: 50vw;
 			padding-top: calc(30vh - 67px);
 			float: left;
+			&__container__title {
+				&::before {
+					width: calc(23vw - 50%);
+					left: calc(-25vw + 50%);
+				}
+				&::after {
+					width: calc(23vw - 50%);
+					right: calc(-25vw + 50%);
+				}
+			}
 			&__informations {
 				display: block;
-				padding-right: 90px;
 				padding-top: 10vh;
 			}
-			&__bars {
-				position: absolute;
-				bottom: 10vh;
-				left: 0;
-				&__item {
-					margin-top: 0;
-					&__value {
-						margin-top: -15px;
-					}
-				}
+			&__button {
+				margin-top: 0;
 			}
 		}
 		&__icons {
@@ -198,7 +153,7 @@
 			height: 100vh;
 			margin-top: 0;
 			display: inline-block;
-			background-color: $brand-gray;
+			background-color: $brand-ala-white;
 			&__list {
 				padding: 25px;
 				padding-top: 10vh;

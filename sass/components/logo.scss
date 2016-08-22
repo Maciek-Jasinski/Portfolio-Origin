@@ -1,24 +1,29 @@
 .container {
 	display: none;
 	position: fixed;
-	top: 30px;
-	left: 30px;
+	top: 5vh;
+	left: 7vw;
 	z-index: 150;
 	&__logo {
 		@extend %logo;
-		&__content {
-			@extend %content;
-			color: $brand-green;
-			transition: 0.1s;
-		}
 	}
+}
+.logo-letter {
+	display: none;
+	position: fixed;
+	top: 5vh;
+	left: calc(7vw + 15px);
+	@extend %content;
+	color: $brand-light-red;
+	transition: 0.1s;
+	z-index: 200;
 }
 .container.active .container__logo__content{
 	opacity: 0;
 }
 .active {
 	color: white;
-	transform: scale(0.5);
+	transform: rotate(45deg);
 	transition: 0.2s;
 }
 .active-prelude {
@@ -33,11 +38,11 @@
 		&__logo {
 			width: 140px;
 			height: 140px;
-			&__content {
-				top: 9px;
-				left: 50px;
-			}
 		}
+	}
+	.logo-letter {
+		top: calc(50% - 55px);
+		left: calc(50% - 12px);
 	}
 }
 

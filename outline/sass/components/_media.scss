@@ -1,4 +1,12 @@
+@media (min-width: 360px) {
+	.nav-icon {
+		padding-right: 30px;
+	}
+}
 @media (min-width: 550px) {
+	.nav-icon {
+		padding-right: 35px;
+	}
 	.clients{
 		&__list{
 			&__item{

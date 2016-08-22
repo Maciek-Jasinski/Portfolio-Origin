@@ -1,6 +1,6 @@
 $(document).ready(function(){
 
-
+	// Text in logo
    var showText = function (target, message, index, interval) {   
   		if (index < message.length) {
     		$(target).append(message[index++]);
@@ -13,21 +13,8 @@ $(document).ready(function(){
    		showText(".home__border-3", "developer", 0, 180);   
  		showText(".home__border-4", "developer", 0, 180);      
 	});
-	var $nrBar = 0;
-	$('.skills__icons__list__item').on('click', function(){
-		$nrBar = $(this).index();
-		$('.skills__icons__list__item').removeClass('icon-hover');
-		$(this).addClass('icon-hover');
-		$('.skills__description__bars__item').animate({
-			'max-width': '0%'
-		}, 500).fadeOut(100);
-		$('.skills__description__bars__item__value').fadeOut(200);
-		$('.skills__description__bars__item[data-nrBar='+$nrBar+']').fadeIn().animate({
-			'max-width': '75%'
-		}, 1000);
-		$('.skills__description__bars__item__value[data-nrValue='+$nrBar+']').delay(1000).fadeIn(100);
-		console.log($nrBar);
-	});
+
+	//page slider on mobile devices
 	var supportTouch = $.support.touch,
             scrollEvent = "touchmove scroll",
             touchStartEvent = supportTouch ? "touchstart" : "mousedown",
@@ -93,6 +80,8 @@ $(document).ready(function(){
             }
         };
     });
+    //page slider
+    var angle = 0;
     var div = 0;
     var running = false;
 	var slide;
@@ -130,7 +119,6 @@ $(document).ready(function(){
 				dir = 'up';
 			}
 		}
-		console.log(e.type);
 		if (dir == 'up' && div == 0) {
 			running = false;
 			return;
@@ -139,19 +127,14 @@ $(document).ready(function(){
 		
 			div--;
 			slide = div + 1;
-			console.log(div);
-
 		}
-
 		if (dir == 'down' && div < divs.length) {
 				div++;
 				slide = div - 1;
-			console.log(div);
 
 		}
 		if (dir == 'down' && div == divs.length) {
 			div--;
-			console.log(div);
 			running = false;
 			return;
 		}
@@ -162,8 +145,9 @@ $(document).ready(function(){
 		if (e.type == 'click') {
 			divs.fadeOut(100);
 		}
-		divs.eq(slide).fadeOut(350)//, function(){
-			divs.eq(div).fadeIn(450, function() {
+		angle = (div * 90) % 810;
+		divs.eq(slide).fadeOut(350);
+			divs.eq(div).fadeIn(200, function() {
 
 				if (div == 3 && dir == 'down'){
 					div++;
@@ -174,42 +158,47 @@ $(document).ready(function(){
 						setTimeout(function(){
 							divs.eq(slide).fadeOut(350);
 							divs.eq(div).fadeIn(450);
-							$('.container').fadeIn(200);
-							running = false;
+								$('.container').fadeIn(200);
+								$('.logo-letter').fadeIn(500);
+								$('.container').css({ transition: "transform 0.5s cubic-bezier(.14,.71,.31,1.19)",
+									transform: "rotate("+angle+"deg)"
+								 });
+								running = false;
+							
 						}, 2000);
-						//divs.eq(slide).delay(2000).fadeOut(200, function(){
-						//	divs.eq(div).fadeIn(200, function() {
-						//		running = false;
-						//		//$('.container').fadeIn(0);
-						//	});
-						//});
-						//$('.container').delay(2000).fadeIn(0, function(){
-						//	//$('.container').addClass('active');
-						//	setTimeout(function(){
-						//		//$('.container').fadeOut(0);		
-						//},200);
-						//});
 					})();
 				}
-			else {
-					running = false;
-				}
-			});
-		//});
+				else {
+						running = false;
+					}
+				});
 		if (div == 0 || div == 3) {
-			$('.container').fadeOut(200);
+			$('.container').fadeOut(100);
+			$('.logo-letter').fadeOut(100);
 		}
-		//$('.container').addClass('active');
-		setTimeout(function(){
-			//$('.container').fadeOut(0);
+		$('.container').css({ transition: "transform 0.5s cubic-bezier(.14,.71,.31,1.19)",
+									transform: "rotate("+angle+"deg)"
+								 });
 				if (div != 0 && div != 3) {
 					$('.container').fadeIn(200);
+					$('.logo-letter').fadeIn(0);
 				}
-		},200);
+		//Navigation hamburger color
+		if ($('body').width() <= 900) {
+			if (div == 5) {
+				$('.navigation__button').addClass('white-button');
+			}
+			else {
+				$('.navigation__button').removeClass('white-button');
+	
+			}
+		}
+		else {
+			$('.navigation__button').removeClass('white-button');
+		}
 		return false;
 	};
-	
-
+	//Navigation animations
 	$('.navigation__button').on('click', function(){
 		if ($('body').width() <= 900) {
 			if ($('.navigation__button').hasClass('active-nav')) {
@@ -261,10 +250,10 @@ $(document).ready(function(){
 			});
 			if ($nrSection < 4){
 			div = $nrSection - 1;	
-		}
-		else {
-			div = $nrSection + 3;
-		}
+			}
+			else {
+				div = $nrSection + 3;
+			}
 		handler(e);
 		}
 		else {

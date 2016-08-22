@@ -74,43 +74,6 @@ $(document).ready(function() {
 				$('header, main, footer, .navigation').removeClass('page_translate');
 		}
 	});
-
-
-	//$(window).scroll(function(){
-	//	var move=$(window).scrollTop();
-	//	var height_window=$(window).height();
-//
-	//	if((move>(slide[1]-height_window))&&(move<(slide[2]-height_window/4))){
-	//		$('.clients__list__item').css({"animation-play-state":"running"});}
-//
-	//	if((move>(slide[2]-height_window))&&(move<(slide[3]-height_window/4))){
-	//		$('.features__title, .features__description, .features__list a, .features__button').css({"animation-play-state":"running"});}
-	//	
-	//	if((move>(slide[3]-height_window))&&(move<(slide[4]-height_window/4))){
-	//		$('.design__title, .design__description, .design__list__item, .design__list2__item, .design__items').css({"animation-play-state":"running"});}
-//
-	//	if((move>(slide[4]-height_window))&&(move<(slide[5]-height_window/4))){
-	//		$('.testimonies__users__list__item').css({"animation-play-state":"running"});}
-//
-	//	if((move>(slide[5]-height_window))&&(move<(slide[6]-height_window/4))){
-	//		$('.testimonies__numbers__list__item').css({"animation-play-state":"running"});}
-//
-	//	if((move>(slide[6]-height_window))&&(move<(slide[7]-height_window/4))){
-	//		$('.products__title, .products__desc, .products__list__item, .products__button').css({"animation-play-state":"running"});}
-//
-	//	if((move>(slide[7]-height_window))&&(move<(slide[8]-height_window/4))){
-	//		$('.benefits__title, .benefits__description, .benefits__list__item').css({"animation-play-state":"running"});}
-//
-	//	if((move>(slide[8]-height_window))&&(move<(slide[9]-height_window/4))){
-	//		$('.app-spot__title, .app-spot__description, .app-spot__button').css({"animation-play-state":"running"});}
-//
-	//	if((move>(slide[9]-height_window))&&(move<(slide[10]-height_window/4))){
-	//		$('.pricing__title, .pricing__description, .pricing__list__item').css({"animation-play-state":"running"});}
-//
-	//		if((move>(slide[9]-height_window))&&(move<(slide[10]-height_window/4))){
-	//		$('.faqs__title, .faqs__description, .faqs__list__item').css({"animation-play-state":"running"});}
-	//});
-
 var $animation_elements = $('section, footer');
 	$(window).on('scroll resize', function(){
 		var window_height = $(window).height();
